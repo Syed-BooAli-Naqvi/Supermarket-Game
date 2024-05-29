@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7340320637124026976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340320637124026983}
+  - component: {fileID: 7340320637124026982}
+  m_Layer: 0
+  m_Name: Currency Object Pooling Manager
+  m_TagString: Note50
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7340320637124026983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340320637124026976}
+  m_LocalRotation: {x: -0.676091, y: 0.2071256, z: 0.2071256, w: 0.676091}
+  m_LocalPosition: {x: -101.974, y: 1.454, z: -93.628}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 34.066}
+--- !u!114 &7340320637124026982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340320637124026976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e06f5491fca49969d6bf27f5631bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: coin1
+    prefeb: {fileID: 3684088829506805070, guid: c5d5fb66043da4a3fa6760c6a50dca92, type: 3}
+    size: 20
+  - tag: coin5
+    prefeb: {fileID: 7873509902332830568, guid: 6f0a85d57e1444f17a9a950a36dd9424, type: 3}
+    size: 20
+  - tag: coin10
+    prefeb: {fileID: 980025863383701061, guid: 326a348b2c4e24684b84ddb6a88dc164, type: 3}
+    size: 20
+  - tag: coin25
+    prefeb: {fileID: 4735879105632523287, guid: 0f0233e4a24f34d8fb49695ba09c5b3b, type: 3}
+    size: 20
+  - tag: coin50
+    prefeb: {fileID: 5385396370588879480, guid: 9bbf91300da7843a787e37a7a92ad997, type: 3}
+    size: 20
+  - tag: Note1
+    prefeb: {fileID: 7064960887217228362, guid: 3b2841298060f45ef95addb1e40b441b, type: 3}
+    size: 10
+  - tag: Note5
+    prefeb: {fileID: 1482197319456856901, guid: 0679f2d29514e406daf41f3a8e747fd3, type: 3}
+    size: 10
+  - tag: Note10
+    prefeb: {fileID: 6625223110679975307, guid: 03b96fa674609428eb20ba4e94723740, type: 3}
+    size: 10
+  - tag: note20
+    prefeb: {fileID: 2645232756943436151, guid: 3b815637aaf6d4dfea7791d16f394174, type: 3}
+    size: 10
+  - tag: Note50
+    prefeb: {fileID: 4769624346329002610, guid: 1a4ad896a8aea4c7594cc9dc94668950, type: 3}
+    size: 10
+  tags:
+  - coin1
+  - coin5
+  - coin10
+  - coin25
+  - coin50
+  - Note1
+  - Note5
+  - Note10
+  - note20
+  - Note50
+  spawntag: 
+  SpawningOBject: []
+  NoteMovingPosList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CoinMovingPosList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Currentobj: {fileID: 0}
+  currencymoveOnCounterPos: {fileID: 0}
+  currencymoveBackPos: {fileID: 0}
+  SpawnPosition: {fileID: 0}

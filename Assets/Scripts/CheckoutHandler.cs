@@ -47,7 +47,6 @@ public class CheckoutHandler : MonoBehaviour
             currentCustomer.customer.objT[j].gameObject.SetActive(true);
             currentCustomer.customer.objT[j].SetParent(parentObjT[j]);
             currentCustomer.customer.objT[j].GetComponent<Collider>().enabled = false;
-            DOTween.To(() => currentCustomer.customer.objT[j].localScale, x => currentCustomer.customer.objT[j].localScale = x, Vector3.zero, 0.1f);
             DOTween.To(() => currentCustomer.customer.objT[j].position, x => currentCustomer.customer.objT[j].position = x, parentObjT[j].position, 0.1f).OnComplete(() =>
             {
                 currentCustomer.customer.objT[j].GetComponent<Collider>().enabled = true;

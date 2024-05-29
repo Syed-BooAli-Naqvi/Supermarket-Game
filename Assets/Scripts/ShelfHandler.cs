@@ -88,7 +88,7 @@ public class ShelfHandler : MonoBehaviour, IInteractable
                 TutorialManager.Instance.StartDustbinTutorial();
             }
             if (PlayerPrefsExtra.GetBool(SharedPref.ShopOpenStatus))
-                GameManager.Instance.Start();
+                GameManager.Instance.Star();
 
             CFCG.alpha = 1;
         }

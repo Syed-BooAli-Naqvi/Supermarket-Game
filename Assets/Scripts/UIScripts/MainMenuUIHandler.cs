@@ -25,7 +25,7 @@ public class MainMenuUIHandler : MonoBehaviour
 
     public void HabdleDeals()
     {
-        deals[Random.Range(0, deals.Length)].SetActive(true);
+        //deals[Random.Range(0, deals.Length)].SetActive(true);
     }
 
     private void Update()

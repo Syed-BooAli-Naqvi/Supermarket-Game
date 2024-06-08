@@ -12,22 +12,8 @@ public class LoadingScript : SingletonDoNotDestroy<LoadingScript>
     public GameObject appOpen, loader;
     public void Start()
     {
-        //appOpen.SetActive(true);
-        //loader.SetActive(false);
-
-        //StartCoroutine(appOpenAuto());
-
-        //yield return new WaitUntil(() => AdsHandler.appOpenNumber > 0);
-
-        //yield return new WaitForSeconds(4);
-        //if (AdsHandler.instance && AdsHandler.instance.appOpenAd != null)
-        //{
-        //    AdsHandler.instance.ShowAppOpenAd();
-        //}
-
         appOpen.SetActive(false);
         loader.SetActive(true);
-        //yield return new WaitUntil(()=> !AdsHandler.instance.isShowingAppOpenAd);
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
             StartCoroutine(AsynchronousLoad(1));
@@ -35,17 +21,7 @@ public class LoadingScript : SingletonDoNotDestroy<LoadingScript>
     IEnumerator appOpenAuto()
     {
         yield return new WaitForSeconds(6);
-        //AdsHandler.appOpenNumber = 3;
     }
-    //IEnumerator SetBanner()
-    //{
-    //    yield return new WaitUntil(() => AdsHandler.instance && AdsHandler.bigBannerAvailable);
-    //        AdsHandler.instance.ShowBigBannerAds();
-    //    if (AdsHandler.bannerAvailable)
-    //    {
-    //        AdsHandler.instance.HideBannerAds();
-    //    }
-    //}
     public IEnumerator AsynchronousLoad(int scene)
     {
         Time.timeScale = 1;

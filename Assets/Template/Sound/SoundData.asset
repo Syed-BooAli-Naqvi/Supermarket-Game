@@ -16,7 +16,7 @@ MonoBehaviour:
   sounds:
   - name: Background
     soundName: 1
-    clip: {fileID: 8300000, guid: fd450113be9504b23ae320a651717fd9, type: 3}
+    clip: {fileID: 8300000, guid: 0a7deefd1feaa4831b92c396045f6296, type: 3}
     loop: 1
   - name: ButtonClick
     soundName: 2

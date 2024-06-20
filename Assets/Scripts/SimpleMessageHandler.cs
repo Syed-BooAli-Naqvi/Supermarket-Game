@@ -12,7 +12,7 @@ public class SimpleMessageHandler : Singleton<SimpleMessageHandler>
     {
         msgTxt.text = msg;
         myG.alpha = 1;
-        Invoke(nameof(HideMsg), 1.5f);
+        Invoke(nameof(HideMsg), 3f);
     }
 
     public void HideMsg()

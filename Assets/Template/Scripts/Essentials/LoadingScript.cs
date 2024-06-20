@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Unity.Advertisement.IosSupport.Components;
 
 public class LoadingScript : SingletonDoNotDestroy<LoadingScript>
 {
@@ -10,8 +11,10 @@ public class LoadingScript : SingletonDoNotDestroy<LoadingScript>
     public Text loadingProgress;
     public float addition, wait;
     public GameObject appOpen, loader;
+    public ContextScreenView csv;
     public void Start()
     {
+        csv.RequestAuthorizationTracking();
         appOpen.SetActive(false);
         loader.SetActive(true);
 

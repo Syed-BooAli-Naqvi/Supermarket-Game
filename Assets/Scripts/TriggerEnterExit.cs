@@ -9,17 +9,19 @@ public class TriggerEnterExit : MonoBehaviour
     public string EnterTag, ExitTag;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(EnterTag))
-        {
-            OnTriggerEnterEvent.Invoke();
-        }
+        if (!string.IsNullOrEmpty(EnterTag))
+            if (other.CompareTag(EnterTag))
+            {
+                OnTriggerEnterEvent.Invoke();
+            }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(ExitTag))
-        {
-            OnTriggerExitEvent.Invoke();
-        }
+        if (!string.IsNullOrEmpty(ExitTag))
+            if (other.CompareTag(ExitTag))
+            {
+                OnTriggerExitEvent.Invoke();
+            }
     }
 }

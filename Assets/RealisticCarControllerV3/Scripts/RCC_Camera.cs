@@ -320,7 +320,8 @@ public class RCC_Camera : MonoBehaviour {
 
         //  If auto focus is enabled, adjust distance and height of the camera automatically.
         if (TPSAutoFocus)
-            StartCoroutine(AutoFocus());
+            if (gameObject.activeInHierarchy)
+                StartCoroutine(AutoFocus());
 
         //  And reset the camera modes.
         SetupForNewMode();

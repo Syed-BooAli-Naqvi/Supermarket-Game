@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a9f18c9c3d2dc4969a1d2229de969b45
   - enabled: 1
-    path: Assets/Scenes/My Supermarket.unity
-    guid: 960f1d4fd0e874a8e9b123802cfaf4d0
-  - enabled: 1
     path: Assets/Scenes/My Supermarket 1.unity
     guid: be64f2d8b768c493eb73a268dc5d683a
+  - enabled: 1
+    path: Assets/Scenes/My Supermarket.unity
+    guid: 960f1d4fd0e874a8e9b123802cfaf4d0
   m_configObjects: {}

@@ -64,11 +64,11 @@ public class MainMenuUIHandler : MonoBehaviour
         settingPopup.SetActive(false);
     }
 
-    public void StartGame()
+    public void StartGame(int sceneNum)
     {
         SoundManager.Instance.PlaySound(SoundName.ButtonClick);
         //AdsHandler.instance.callInterstitialwithCounter();
-        StartCoroutine(LoadingScript.Instance.AsynchronousLoad(2));
+        StartCoroutine(LoadingScript.Instance.AsynchronousLoad(sceneNum));
     }
 
     public void RewardPlayer()

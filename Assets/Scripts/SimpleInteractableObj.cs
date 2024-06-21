@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using static UIHandler;
+using static SupermarketLevelsManager;
 
 public class SimpleInteractableObj : MonoBehaviour,IInteractable
 {

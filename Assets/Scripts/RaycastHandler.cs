@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UIHandler;
 
 public class RaycastHandler : MonoBehaviour
@@ -21,7 +22,10 @@ public class RaycastHandler : MonoBehaviour
                 {
                     if (interactableObject != null)
                     {
-                        DisableInteractBtn(); // Disable interaction for the previous interactable
+                        if (SceneManager.GetActiveScene().name != "My Supermarket 1")
+                            DisableInteractBtn(); // Disable interaction for the previous interactable
+                        else
+                            SupermarketLevelsManager.Instance.DisableInteractBtn();
                         interactableObject.NonInteract();
                     }
                     interactableObject = interactable; // Set the new interactable object
@@ -30,14 +34,20 @@ public class RaycastHandler : MonoBehaviour
             }
             else if (interactableObject != null)
             {
-                DisableInteractBtn(); // Disable interaction if no interactable object is hit
+                if (SceneManager.GetActiveScene().name != "My Supermarket 1")
+                    DisableInteractBtn(); // Disable interaction if no interactable object is hit
+                else
+                    SupermarketLevelsManager.Instance.DisableInteractBtn();
                 interactableObject.NonInteract();
                 interactableObject = null; // Clear the reference to the interactable object
             }
         }
         else if (interactableObject != null)
         {
-            DisableInteractBtn(); // Disable interaction if no object is hit by the raycast
+            if (SceneManager.GetActiveScene().name != "My Supermarket 1")
+                DisableInteractBtn(); // Disable interaction if no object is hit by the raycast
+            else
+                SupermarketLevelsManager.Instance.DisableInteractBtn();
             interactableObject.NonInteract();
             interactableObject = null; // Clear the reference to the interactable object
         }

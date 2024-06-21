@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Level1 : MonoBehaviour
+public class Level2 : MonoBehaviour
 {
     public GameObject[] enable, disable;
     public Rigidbody car;
@@ -24,10 +24,10 @@ public class Level1 : MonoBehaviour
     public IEnumerator CheckLevelStatus()
     {
         car.isKinematic = true;
-        SimpleMessageHandler.Instance.ShowMessage("Today you will stock up your storage.");
+        SimpleMessageHandler.Instance.ShowMessage("You need to get these boxes to your store.");
         yield return new WaitUntil(() => SimpleMessageHandler.Instance.GetComponent<CanvasGroup>().alpha == 0);
         yield return new WaitForSeconds(1);
-        SimpleMessageHandler.Instance.ShowMessage("Go to ATM to withdraw some cash.");
+        SimpleMessageHandler.Instance.ShowMessage("Go to store and drop these boxes.");
         car.isKinematic = false;
     }
 }

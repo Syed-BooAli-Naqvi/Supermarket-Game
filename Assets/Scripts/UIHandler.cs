@@ -85,6 +85,6 @@ public class UIHandler : Singleton<UIHandler>
 
     public void Restart()
     {
-        StartCoroutine(LoadingScript.Instance.AsynchronousLoad(2));
+        StartCoroutine(LoadingScript.Instance.AsynchronousLoad(3));
     }
 }

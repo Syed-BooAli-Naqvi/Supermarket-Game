@@ -9,8 +9,31 @@ public class MainMenuUIHandler : MonoBehaviour
     public GameObject settingPopup;
     public Slider music, sound;
     public GameObject[] deals;
+
+    public GameObject[] locks;
+    public int mode;
+
+    public void OpenLevel(int a)
+    {
+        PlayerPrefs.SetInt("SuperLevel", a + 1);
+        StartCoroutine(LoadingScript.Instance.AsynchronousLoad(mode));
+    }
+
+    public void SetModeIndex(int modeNum)
+    {
+        mode = modeNum;
+
+        if (modeNum == 3)
+        {
+
+        }
+    }
     private void Start()
     {
+        for (int i = 0; i < PlayerLevelManager.GetPlayerLevel(); i++)
+        {
+            locks[i].SetActive(false);
+        }
         //deals.SetActive(true);
         music.value = PlayerPrefs.GetFloat(SharedPrefs.MusicLevel, 1);
         sound.value = PlayerPrefs.GetFloat(SharedPrefs.SoundLevel, 1);

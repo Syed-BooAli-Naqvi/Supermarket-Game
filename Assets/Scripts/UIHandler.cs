@@ -3,8 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHandler : Singleton<UIHandler>
+public class UIHandler : MonoBehaviour
 {
+
+    public static UIHandler Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+    private void OnDisable()
+    {
+        Instance = null;
+    }
+
     public Button interactHandBtn;
     public static Button InteractHandBtn { get { return Instance.interactHandBtn; } }
     public static GameObject InteractHandObj { get { return Instance.interactHandBtn.gameObject; } }

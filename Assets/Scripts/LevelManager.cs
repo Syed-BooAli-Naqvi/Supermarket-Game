@@ -29,7 +29,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         for (int i = 0; i < levels.Count; i++)
         {
-            levels[i].SetActive(i == PlayerPrefs.GetInt("SuperLevel"));
+            levels[i].SetActive(i == (PlayerPrefs.GetInt("SuperLevel") - 1));
         }
     }
 
@@ -70,11 +70,13 @@ public class PlayerLevelManager
         // If the player level exists in PlayerPrefs, return it
         if (PlayerPrefs.HasKey(PlayerLevelKey))
         {
+        Debug.Log("Getting Player Level = " + PlayerPrefs.GetInt(PlayerLevelKey));
             return PlayerPrefs.GetInt(PlayerLevelKey);
         }
         // If not, set the default starting level and return it
         else
         {
+            Debug.Log("Getting Player Level = " + DefaultStartingLevel);
             SetPlayerLevel(DefaultStartingLevel);
             return DefaultStartingLevel;
         }

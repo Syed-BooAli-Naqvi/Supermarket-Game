@@ -71,7 +71,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.DealerTut) != 1)
             foreach (var item in DealerTuts)
             item.SetActive(true);
-        SetTutTxt("Go And buy supermarket from dealer.");
+        SetTutTxt("Go and buy the supermarket from the dealer.");
     }
 
     public void StartNameChangeTut()
@@ -79,7 +79,7 @@ public class TutorialManager : Singleton<TutorialManager>
         Debug.Log("StartNameChangeTut");
         foreach (var item in DealerTuts)
             item.SetActive(false);
-        SetTutTxt("Let's change your shop name.");
+        SetTutTxt("Decide on a new name for your store.");
     }
 
     public void StartBannerPickTut()
@@ -93,7 +93,7 @@ public class TutorialManager : Singleton<TutorialManager>
             foreach (var item in BannerPickTuts)
                 item.SetActive(true);
 
-            SetTutTxt("Go and pick up store banner from inside the store.");
+            SetTutTxt("Collect the store banner from inside the shop.");
         }
     }
 
@@ -110,14 +110,14 @@ public class TutorialManager : Singleton<TutorialManager>
         foreach (var item in BannerPlaceTuts)
             item.SetActive(true);
 
-        SetTutTxt("Now place this banner outside the shop");
+        SetTutTxt("Place the banner outside the shop where it's visible.");
     }
 
 
     public void StarDoorOpenTut()
     {
         Debug.Log("StarDoorOpenTut");
-        SetTutTxt("Open your supermarket door.");
+        SetTutTxt("Open the supermarket door.");
         foreach (var item in BannerPickTuts)
             item.SetActive(false);
         foreach (var item in BannerPlaceTuts)
@@ -136,7 +136,7 @@ public class TutorialManager : Singleton<TutorialManager>
             item.SetActive(true);
         foreach (var item in BannerPlaceTuts)
             item.SetActive(false);
-        SetTutTxt("Welcome to your supermarket.\nNow go to your laptop.");
+        SetTutTxt("Access your laptop for further tasks.");
     }
 
     public void StartDeliveryTutorial()
@@ -155,7 +155,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.DealerTut) != 1)
             foreach (var item in DeliveryTut)
             item.SetActive(true);
-        SetTutTxt("Now you need to go outside and wait till delivery is completed.\nYou can speed up using lighting.");
+        SetTutTxt("Go outside and wait until deliveries are completed. Use lighting to speed up this process if possible.");
     }
 
     public void StartShelfSettingTutorial()
@@ -174,7 +174,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.ShelfSettingTutorial) != 1)
             foreach (var item in ShelfTut)
             item.SetActive(true);
-        SetTutTxt("Now you need to go set these products in shelf.");
+        SetTutTxt("Arrange the delivered products on the shelves.");
     }
 
 
@@ -196,7 +196,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.DustbinTutorial) != 1)
             foreach (var item in DustbinTut)
             item.SetActive(true);
-        SetTutTxt("You should keep your shop clean.\nGo outside and throw this box in dustbin.");
+        SetTutTxt("Ensure the shop is kept clean throughout.\nTake any packaging materials outside and throw them in the dustbin.");
     }
 
 
@@ -220,7 +220,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.ShelfPriceSetTut) != 1)
             foreach (var item in ShelfPriceTut)
             item.SetActive(true);
-        SetTutTxt("You should keep in mind to set the price of products you place on shelf.\nLet's go and set prices.");
+        SetTutTxt("Remember to price the products on the shelves.");
     }
 
 
@@ -246,7 +246,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.ShopOpenCloseTut) != 1)
             foreach (var item in ShopOCTut)
             item.SetActive(true);
-        SetTutTxt("Let's open your market.");
+        SetTutTxt("Open the market to customers.");
     }
 
 
@@ -274,7 +274,7 @@ public class TutorialManager : Singleton<TutorialManager>
         if (PlayerPrefs.GetInt(SharedPref.CounterTut) != 1)
             foreach (var item in CheckoutCounterTut)
             item.SetActive(true);
-        SetTutTxt("Let's goto your checkout counter.");
+        SetTutTxt("Go to your checkout counter to assist customers with their purchases.");
     }
 
     public void SetTutTxt(string tut)

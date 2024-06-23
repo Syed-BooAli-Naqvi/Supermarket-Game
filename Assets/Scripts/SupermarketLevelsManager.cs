@@ -4,8 +4,23 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SupermarketLevelsManager : Singleton<SupermarketLevelsManager>
+public class SupermarketLevelsManager : MonoBehaviour
 {
+
+    public static SupermarketLevelsManager Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+    private void OnDisable()
+    {
+        Instance = null;
+    }
+
     public Button interactHandBtn;
     public static Button InteractHandBtn { get { return Instance.interactHandBtn; } }
     public static GameObject InteractHandObj { get { return Instance.interactHandBtn.gameObject; } }

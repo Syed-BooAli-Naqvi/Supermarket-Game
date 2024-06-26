@@ -138,6 +138,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3797277044488024539, guid: 647d85ef8b91620499de03cdd3c56ed5, type: 3}
   m_PrefabInstance: {fileID: 7813195893600633703}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6850821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6850822}
+  m_Layer: 0
+  m_Name: CerealsDeliveryBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6850822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.821609, y: 0.2767804, z: -0.31325635, w: 0.38758466}
+  m_LocalPosition: {x: -0.145, y: 0.182, z: 0.488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1867473800}
+  m_LocalEulerAnglesHint: {x: 125.875, y: 30.813995, z: -21.207}
 --- !u!1001 &8726470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3562,7 +3593,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: PickBox
         m_Mode: 2
@@ -4613,6 +4644,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3481669949192338613, guid: 6f7bd3e2e6b8e41449a7d61517b8c681, type: 3}
   m_PrefabInstance: {fileID: 1060165479315516839}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &107861835 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1203127709, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+  m_PrefabInstance: {fileID: 161865166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &108347342
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,6 +5476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vBasicController
       objectReference: {fileID: 0}
+    - target: {fileID: 149290, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 409158, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5510,18 +5550,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266091336, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 266091336, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 266291612, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 266291612, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032505615, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1032505619, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
@@ -5550,7 +5594,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 409158, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
       insertIndex: 0
       addedObject: {fileID: 2065216408}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 149290, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1732016763}
+    - targetCorrespondingSourceObject: {fileID: 149290, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1732016762}
   m_SourcePrefab: {fileID: 100100000, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
 --- !u!1 &162723617 stripped
 GameObject:
@@ -7203,7 +7253,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 219106984}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7215,7 +7265,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1416135339}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7227,7 +7277,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 741869509}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7239,7 +7289,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7251,7 +7301,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2079283660}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7264,8 +7314,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &219106987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12129,159 +12177,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 936288492301775246, guid: aa435ff693930444f82416cd4e047b81, type: 3}
   m_PrefabInstance: {fileID: 306381687}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &306607835
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1868905654}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -65.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.2218
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 82.1588
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0000066757066
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.00010681154
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: field of view
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 7991
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Volume
-      value: 0.129
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: canMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: moveTut
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: canRotate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: rotateTut
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_RunSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_IsWalking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_WalkSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_FovKick.Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_MouseLook.smooth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_MouseLook.MaximumX
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_MouseLook.MinimumX
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_HeadBob.VerticalBobRange
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_HeadBob.HorizontalBobRange
-      value: 0.05
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &306888136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2890895797025857787, guid: e570a12b3229ed04883d800f0331d716, type: 3}
@@ -15082,7 +14977,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -16909,92 +16804,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8718188147080092903, guid: e570a12b3229ed04883d800f0331d716, type: 3}
   m_PrefabInstance: {fileID: 6687272928399537673}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &464393156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 476284237}
-  - component: {fileID: 464393159}
-  - component: {fileID: 464393158}
-  - component: {fileID: 464393157}
-  m_Layer: 0
-  m_Name: FreeLookCameraRig
-  m_TagString: Untagged
-  m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &464393157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464393156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b04ec3bda6b7747aa53936ef3b0ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipMoveTime: 0.05
-  returnTime: 0.4
-  sphereCastRadius: 0.1
-  visualiseInEditor: 1
-  closestDistance: 0.5
-  dontClipTag: Player
---- !u!114 &464393158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464393156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44af8091779fcb40801d5b284353dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 0}
-  m_AutoTargetPlayer: 1
-  m_UpdateType: 0
-  m_MoveSpeed: 5
-  m_TurnSpeed: 2.75
-  m_TurnSmoothing: 10
-  m_TiltMax: 75
-  m_TiltMin: 45
-  m_LockCursor: 0
-  m_VerticalAutoReturn: 0
---- !u!54 &464393159
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464393156}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &464759771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1251859396777826585, guid: c9fc6dddf0213f64c8151b3298b89b61, type: 3}
@@ -17319,22 +17128,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7855780696808231271, guid: 9e9cd2351aed6b14892d2283f7be1856, type: 3}
   m_PrefabInstance: {fileID: 7172236776464292858}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &476284237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464393156}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 0, z: 18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1964543183}
-  m_Father: {fileID: 1143968937}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &476781155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5057537838305375823, guid: d8ae806fd0e54bb44b592000e0cdbef0, type: 3}
@@ -18954,1886 +18747,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8718188147080092903, guid: e570a12b3229ed04883d800f0331d716, type: 3}
   m_PrefabInstance: {fileID: 197556365489818813}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &532879861
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 532879863}
-  - component: {fileID: 532879862}
-  m_Layer: 0
-  m_Name: CF2-Rig
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &532879862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532879861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7d3c0703122fd4b813bd6bb7cc734c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoActivate: 1
-  overrideActiveRig: 1
-  hideWhenDisactivated: 1
-  disableWhenDisactivated: 0
-  hideWhenTouchScreenIsUnused: 1
-  hideWhenTouchScreenIsUnusedDelay: 10
-  hideWhenGamepadIsActivated: 1
-  hideWhenGamepadIsActivatedDelay: 5
-  fingerRadiusInCm: 0.25
-  swipeOverFromNothing: 0
-  controlBaseAlphaAnimDuration: 0.5
-  animatorMaxAnimDuration: 0.2
-  ninetyDegTurnMouseDelta: 500
-  ninetyDegTurnTouchSwipeInCm: 4
-  ninetyDegTurnAnalogDuration: 0.75
-  virtualScreenDiameterInches: 4
-  scrollStepsPerNinetyDegTurn: 10
-  joysticks:
-    list: []
-  axes:
-    list:
-    - name: Horizontal
-      axisType: 1
-      deltaMode: 1
-      snap: 1
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 275
-      affectedKeyNegative: 276
-      keyboardPositive: 275
-      keyboardPositiveAlt0: 100
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 276
-      keyboardNegativeAlt0: 97
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0.33333334
-      digitalToAnalogDecelTime: 0.33333334
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Vertical
-      axisType: 1
-      deltaMode: 1
-      snap: 1
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 273
-      affectedKeyNegative: 274
-      keyboardPositive: 273
-      keyboardPositiveAlt0: 119
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 274
-      keyboardNegativeAlt0: 115
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0.33333334
-      digitalToAnalogDecelTime: 0.33333334
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Mouse X
-      axisType: 4
-      deltaMode: 1
-      snap: 0
-      scale: 0.1
-      affectSourceKeys: 1
-      affectedKeyPositive: 0
-      affectedKeyNegative: 0
-      keyboardPositive: 0
-      keyboardPositiveAlt0: 0
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Mouse Y
-      axisType: 4
-      deltaMode: 1
-      snap: 0
-      scale: 0.1
-      affectSourceKeys: 1
-      affectedKeyPositive: 0
-      affectedKeyNegative: 0
-      keyboardPositive: 0
-      keyboardPositiveAlt0: 0
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Mouse ScrollWheel
-      axisType: 3
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 0
-      affectedKeyNegative: 0
-      keyboardPositive: 0
-      keyboardPositiveAlt0: 0
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Mouse ScrollWheel Secondary
-      axisType: 3
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 0
-      affectedKeyNegative: 0
-      keyboardPositive: 0
-      keyboardPositiveAlt0: 0
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0.25
-      digitalToAnalogDecelTime: 0.25
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Fire1
-      axisType: 2
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 306
-      affectedKeyNegative: 0
-      keyboardPositive: 306
-      keyboardPositiveAlt0: 323
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Fire2
-      axisType: 2
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 308
-      affectedKeyNegative: 0
-      keyboardPositive: 308
-      keyboardPositiveAlt0: 324
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Jump
-      axisType: 2
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 32
-      affectedKeyNegative: 0
-      keyboardPositive: 32
-      keyboardPositiveAlt0: 0
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-    - name: Fire3
-      axisType: 2
-      deltaMode: 1
-      snap: 0
-      scale: 1
-      affectSourceKeys: 1
-      affectedKeyPositive: 304
-      affectedKeyNegative: 0
-      keyboardPositive: 304
-      keyboardPositiveAlt0: 325
-      keyboardPositiveAlt1: 0
-      keyboardPositiveAlt2: 0
-      keyboardNegative: 0
-      keyboardNegativeAlt0: 0
-      keyboardNegativeAlt1: 0
-      keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
-      rawSmoothingTime: 0
-      smoothingTime: 0
-      digitalToAnalogAccelTime: 0
-      digitalToAnalogDecelTime: 0
-      digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
-      digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
-  keyboardBlockedCodes: 
-  dpadConfig:
-    analogDeadZone: 0.3
-    analogEndZone: 1
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    clampMode: 1
-    perAxisDeadzones: 0
-    stickMode: 2
-    originalDirResetMode: 0
-    angularMagnet: 0
-    digitalDetectionMode: 1
-    blockX: 0
-    blockY: 0
-  leftStickConfig:
-    analogDeadZone: 0.3
-    analogEndZone: 0.7
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    clampMode: 1
-    perAxisDeadzones: 0
-    stickMode: 0
-    originalDirResetMode: 0
-    angularMagnet: 0.5
-    digitalDetectionMode: 1
-    blockX: 0
-    blockY: 0
-  rightStickConfig:
-    analogDeadZone: 0.3
-    analogEndZone: 0.7
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    clampMode: 1
-    perAxisDeadzones: 0
-    stickMode: 0
-    originalDirResetMode: 0
-    angularMagnet: 0.5
-    digitalDetectionMode: 1
-    blockX: 0
-    blockY: 0
-  leftTriggerAnalogConfig:
-    analogDeadZone: 0.2
-    analogEndZone: 1
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.5
-    digitalLeaveThresh: 0.2
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  rightTriggerAnalogConfig:
-    analogDeadZone: 0.2
-    analogEndZone: 1
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.5
-    digitalLeaveThresh: 0.2
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  gamepads:
-  - enabled: 0
-    digiFaceDownBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceRightBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceLeftBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceUpBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiStartBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiSelectBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    analogL2Binding:
-      enabled: 0
-      targetList: []
-    analogR2Binding:
-      enabled: 0
-      targetList: []
-    leftStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    rightStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    dpadStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-  - enabled: 0
-    digiFaceDownBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceRightBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceLeftBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceUpBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiStartBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiSelectBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    analogL2Binding:
-      enabled: 0
-      targetList: []
-    analogR2Binding:
-      enabled: 0
-      targetList: []
-    leftStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    rightStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    dpadStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-  - enabled: 0
-    digiFaceDownBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceRightBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceLeftBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceUpBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiStartBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiSelectBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    analogL2Binding:
-      enabled: 0
-      targetList: []
-    analogR2Binding:
-      enabled: 0
-      targetList: []
-    leftStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    rightStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    dpadStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-  - enabled: 0
-    digiFaceDownBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceRightBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceLeftBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiFaceUpBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiStartBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiSelectBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR1Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR2Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    analogL2Binding:
-      enabled: 0
-      targetList: []
-    analogR2Binding:
-      enabled: 0
-      targetList: []
-    leftStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    rightStickStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    dpadStateBinding:
-      enabled: 0
-      horzAxisBinding:
-        enabled: 0
-        targetList: []
-      vertAxisBinding:
-        enabled: 0
-        targetList: []
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-  anyGamepad:
-    enabled: 1
-    digiFaceDownBinding:
-      enabled: 1
-      axisList:
-      - axisName: Fire1
-        axisPositiveSide: 1
-      keyList: 
-    digiFaceRightBinding:
-      enabled: 1
-      axisList:
-      - axisName: Jump
-        axisPositiveSide: 1
-      keyList: 
-    digiFaceLeftBinding:
-      enabled: 1
-      axisList:
-      - axisName: Fire2
-        axisPositiveSide: 1
-      keyList: 
-    digiFaceUpBinding:
-      enabled: 1
-      axisList:
-      - axisName: Fire3
-        axisPositiveSide: 1
-      keyList: 
-    digiStartBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiSelectBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiL1Binding:
-      enabled: 1
-      axisList:
-      - axisName: Fire2
-        axisPositiveSide: 1
-      keyList: 
-    digiR1Binding:
-      enabled: 1
-      axisList:
-      - axisName: Fire1
-        axisPositiveSide: 1
-      keyList: 
-    digiL2Binding:
-      enabled: 1
-      axisList:
-      - axisName: Fire2
-        axisPositiveSide: 1
-      keyList: 
-    digiR2Binding:
-      enabled: 1
-      axisList:
-      - axisName: Fire1
-        axisPositiveSide: 1
-      keyList: 
-    digiL3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    digiR3Binding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    analogL2Binding:
-      enabled: 0
-      targetList: []
-    analogR2Binding:
-      enabled: 0
-      targetList: []
-    leftStickStateBinding:
-      enabled: 1
-      horzAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Horizontal
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      vertAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Vertical
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    rightStickStateBinding:
-      enabled: 1
-      horzAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Mouse X
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      vertAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Mouse Y
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-    dpadStateBinding:
-      enabled: 1
-      horzAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Horizontal
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      vertAxisBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Vertical
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      dirBinding:
-        enabled: 0
-        bindDiagonals: 1
-        bindMode: 0
-        dirBindingU:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDR:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingD:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingDL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingUL:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingN:
-          enabled: 0
-          axisList: []
-          keyList: 
-        dirBindingAny:
-          enabled: 0
-          axisList: []
-          keyList: 
-  rigSwitches:
-    list: []
-  autoInputList:
-    list: []
-  tilt:
-    tiltState:
-      analogRange: {x: 25, y: 25}
-    disablingConditions:
-      mobileModeRelation: 0
-      disableWhenTouchScreenInactive: 0
-      disableWhenCursorIsUnlocked: 0
-      switchList: []
-    rollAnalogConfig:
-      analogDeadZone: 0.3
-      analogEndZone: 1
-      analogRangeStartValue: 0
-      digitalEnterThresh: 0.5
-      digitalLeaveThresh: 0.2
-      digitalToAnalogPressSpeed: 0.5
-      digitalToAnalogReleaseSpeed: 0.5
-      useRamp: 0
-      ramp:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.5
-          value: 0.5
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    pitchAnalogConfig:
-      analogDeadZone: 0.3
-      analogEndZone: 1
-      analogRangeStartValue: 0
-      digitalEnterThresh: 0.5
-      digitalLeaveThresh: 0.2
-      digitalToAnalogPressSpeed: 0.5
-      digitalToAnalogReleaseSpeed: 0.5
-      useRamp: 0
-      ramp:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.5
-          value: 0.5
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    rollBinding:
-      enabled: 0
-      targetList:
-      - separateAxes: 0
-        singleAxis: Horizontal
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    pitchBinding:
-      enabled: 0
-      targetList:
-      - separateAxes: 0
-        singleAxis: Vertical
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    rollLeftBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    rollRightBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    pitchForwardBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-    pitchBackwardBinding:
-      enabled: 0
-      axisList: []
-      keyList: 
-  mouseConfig:
-    horzDeltaBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Mouse X
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    vertDeltaBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Mouse Y
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-  scrollWheel:
-    horzScrollDeltaBinding:
-      enabled: 1
-      deltaBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Mouse ScrollWheel Secondary
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      positiveDigitalBinding:
-        enabled: 0
-        axisList: []
-        keyList: 
-      negativeDigitalBinding:
-        enabled: 0
-        axisList: []
-        keyList: 
-    vertScrollDeltaBinding:
-      enabled: 1
-      deltaBinding:
-        enabled: 1
-        targetList:
-        - separateAxes: 0
-          singleAxis: Mouse ScrollWheel
-          reverseSingleAxis: 0
-          positiveAxis: 
-          negativeAxis: 
-          positiveAxisAsPositive: 1
-          negativeAxisAsPositive: 1
-      positiveDigitalBinding:
-        enabled: 0
-        axisList: []
-        keyList: 
-      negativeDigitalBinding:
-        enabled: 0
-        axisList: []
-        keyList: 
---- !u!4 &532879863
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532879861}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.396141, y: -1.0000291, z: 10.279329}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1470620664}
-  m_Father: {fileID: 1836286449}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534250977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1960256396141026818, guid: ec73543c7bbb6364fa5392208c95486d, type: 3}
@@ -26473,7 +24386,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: PickBox
         m_Mode: 2
@@ -27110,7 +25023,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: PlaceObject
         m_Mode: 1
@@ -28653,6 +26566,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1868905654}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &706216966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8155142713518885482, guid: 5428602ffab01428c99a5216955a3276, type: 3}
+  m_PrefabInstance: {fileID: 1161494339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &706216968 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
+  m_PrefabInstance: {fileID: 1161494339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &706709983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29543,9 +27466,9 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: SetCratePosition1
+        m_MethodName: SetCratePosition
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 730010706}
@@ -30486,263 +28409,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5373576323908766543, guid: 6ca671c000a61ab419dceced9b53df92, type: 3}
   m_PrefabInstance: {fileID: 43063402366711363}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &750824452
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 750824453}
-  - component: {fileID: 750824456}
-  - component: {fileID: 750824455}
-  - component: {fileID: 750824454}
-  m_Layer: 0
-  m_Name: Joystick-0-Base
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &750824453
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750824452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2118888448}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &750824454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750824452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 2118888449}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteMode: 0
-  spriteNeutralPressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUp:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDown:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  animateTransl: 0
-  moveScale: {x: 0, y: 0}
-  translationSmoothingTime: 0.1
-  rotationMode: 0
-  simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
---- !u!114 &750824455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750824452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &750824456
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750824452}
-  m_CullTransparentMesh: 1
 --- !u!4 &751961843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711699236050769120, guid: 90a0dc12702f60844871d8400620b48b, type: 3}
@@ -33548,11 +31214,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1158822828425220773, guid: 02af36959d31a47458ede38c261eafc4, type: 3}
   m_PrefabInstance: {fileID: 6059656915813522190}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &775690596 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 306607835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &778446232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2951556976134846361, guid: 6ca671c000a61ab419dceced9b53df92, type: 3}
@@ -35588,7 +33249,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: PickBox
         m_Mode: 2
@@ -36279,7 +33940,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: PickBox
         m_Mode: 2
@@ -38383,7 +36044,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1809333867}
         m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: 
+        m_MethodName: set_isKinematic
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38395,7 +36056,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1151180470}
         m_TargetAssemblyTypeName: SupermarketLevelsManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ChangeToPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38407,7 +36068,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 967974084}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38419,7 +36080,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38429,9 +36090,9 @@ MonoBehaviour:
           m_StringArgument: Drop these crates on floor.
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SetPositionOfPlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 967974085}
@@ -38444,8 +36105,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &967974087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40589,7 +38248,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -43708,9 +41367,9 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: SetCratePosition1
+        m_MethodName: SetCratePosition
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1118624345}
@@ -45349,7 +43008,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -45387,38 +43046,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5600007, y: 3.56, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1143968936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1143968937}
-  m_Layer: 0
-  m_Name: Cameras
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1143968937
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143968936}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -168.5, y: -5.1358, z: 20.508797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 476284237}
-  m_Father: {fileID: 1868905654}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1144931906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7665370509993299187, guid: ec73543c7bbb6364fa5392208c95486d, type: 3}
@@ -45529,16 +43156,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactHandBtn: {fileID: 2001435615}
-  cFCG: {fileID: 1470620668}
+  cFCG: {fileID: 1174278446}
   rccThings:
   - {fileID: 490679954}
   - {fileID: 614038813}
   - {fileID: 1162334816}
   - {fileID: 6775489804677953504}
   playerThings:
-  - {fileID: 532879861}
-  - {fileID: 0}
-  - {fileID: 1143968936}
+  - {fileID: 1732016749}
+  - {fileID: 1732016749}
+  - {fileID: 706216966}
   cashTxt: {fileID: 2076527258}
   PausePanel: {fileID: 4541735658001985095}
   LevelCompletePanel: {fileID: 1556649163}
@@ -45921,7 +43548,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1836286449}
     m_Modifications:
     - target: {fileID: 8155142713388976367, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_IsActive
@@ -45937,15 +43564,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15.396141
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.0000291
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10.279327
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45953,15 +43580,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8155142713518885484, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -45991,6 +43618,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8155142714501347314, guid: 5428602ffab01428c99a5216955a3276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8155142714676826767, guid: 5428602ffab01428c99a5216955a3276, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -46014,7 +43645,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8155142714979661316, guid: 5428602ffab01428c99a5216955a3276, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174278446}
   m_SourcePrefab: {fileID: 100100000, guid: 5428602ffab01428c99a5216955a3276, type: 3}
 --- !u!1 &1161662571 stripped
 GameObject:
@@ -46382,6 +44016,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4522349050237781152, guid: 62a303fd94f039641b67805d51c7104e, type: 3}
   m_PrefabInstance: {fileID: 1087174167420224523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1174278441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8155142714979661316, guid: 5428602ffab01428c99a5216955a3276, type: 3}
+  m_PrefabInstance: {fileID: 1161494339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1174278446
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174278441}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1177790642 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 390808057548011182, guid: 9bc8b045b5b349047b351fe641b8490d, type: 3}
@@ -48417,7 +46068,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -49622,7 +47273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508789026359, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_TagString
-      value: note20
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508940745141, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_Layer
@@ -51543,263 +49194,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6434935373356470908, guid: 90a0dc12702f60844871d8400620b48b, type: 3}
   m_PrefabInstance: {fileID: 7195728876089262852}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1357557436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1357557437}
-  - component: {fileID: 1357557440}
-  - component: {fileID: 1357557439}
-  - component: {fileID: 1357557438}
-  m_Layer: 0
-  m_Name: Joystick-0-Hat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1357557437
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357557436}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2118888448}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.125, y: 0.125}
-  m_AnchorMax: {x: 0.875, y: 0.875}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1357557438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357557436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 2118888449}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteMode: 0
-  spriteNeutralPressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUp:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDown:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  animateTransl: 1
-  moveScale: {x: 0.5, y: 0.5}
-  translationSmoothingTime: 0.1
-  rotationMode: 0
-  simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
---- !u!114 &1357557439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357557436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1357557440
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357557436}
-  m_CullTransparentMesh: 1
 --- !u!4 &1357670061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5057537838305375823, guid: d8ae806fd0e54bb44b592000e0cdbef0, type: 3}
@@ -52033,7 +49427,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1773569807}
         m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: 
+        m_MethodName: set_isKinematic
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52045,7 +49439,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1151180470}
         m_TargetAssemblyTypeName: SupermarketLevelsManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ChangeToPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52057,7 +49451,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1366693068}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52069,7 +49463,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52079,9 +49473,9 @@ MonoBehaviour:
           m_StringArgument: Go to the atm and withdraw money.
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SetPositionOfPlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1366693069}
@@ -52094,8 +49488,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!4 &1370404814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5057537838305375823, guid: d8ae806fd0e54bb44b592000e0cdbef0, type: 3}
@@ -52179,7 +49571,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1377575003}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52191,7 +49583,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1964301357}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52203,7 +49595,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1506437729}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52215,7 +49607,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52227,7 +49619,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 219106984}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52240,8 +49632,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &1377575006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54245,7 +51635,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1460767272}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54257,7 +51647,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1624349616}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54269,7 +51659,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1161148042}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54281,7 +51671,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54293,7 +51683,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2100296818}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54306,8 +51696,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &1460767275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54493,121 +51881,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3567827159873417558, guid: e1e25ee8bcb80b14eb53e0217079b449, type: 3}
   m_PrefabInstance: {fileID: 9011342429060014271}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1470620663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1470620664}
-  - component: {fileID: 1470620667}
-  - component: {fileID: 1470620666}
-  - component: {fileID: 1470620665}
-  - component: {fileID: 1470620668}
-  m_Layer: 0
-  m_Name: CF2-Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1470620664
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470620663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2143970927}
-  m_Father: {fileID: 532879863}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1470620665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470620663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1470620666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470620663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 480}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1470620667
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470620663}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 1
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 100
-  m_TargetDisplay: 0
---- !u!225 &1470620668
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470620663}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1470761760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6630689253494352629, guid: 9cba329de8ed88446923db1dbb36ae2f, type: 3}
@@ -55008,7 +52281,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -55186,110 +52459,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8718188147080092903, guid: e570a12b3229ed04883d800f0331d716, type: 3}
   m_PrefabInstance: {fileID: 6864832003355711309}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1497501592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1497501593}
-  - component: {fileID: 1497501594}
-  m_Layer: 0
-  m_Name: Jump-Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1497501593
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497501592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1892363530}
-  m_Father: {fileID: 2143970927}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40.80001, y: 40.8}
-  m_SizeDelta: {x: 72.00003, y: 72.000015}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1497501594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497501592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200e84c2a433bd44a81bed0f6a4a052c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreFingerRadius: 0
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 2
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
-  fadeOutWhenReleased: 1
-  startFadedOut: 1
-  fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
-  centerOnDirectTouch: 1
-  centerOnIndirectTouch: 1
-  centerWhenFollowing: 1
-  stickyMode: 0
-  clampInsideRegion: 1
-  clampInsideCanvas: 1
-  returnToStartingPosition: 0
-  directInitialVector: {x: 0, y: 0}
-  indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.1
-  originSmoothTime: 0.5
-  targetDynamicRegion: {fileID: 0}
-  toggle: 0
-  toggleOnAction: 0
-  toggleOffAction: 1
-  toggleOffWhenHiding: 0
-  autoToggleOff: 0
-  autoToggleOffTimeOut: 1
-  linkToggleToRigSwitch: 0
-  toggleRigSwitchName: 
-  pressBinding:
-    enabled: 1
-    axisList:
-    - axisName: Jump
-      axisPositiveSide: 1
-    keyList: 
-  toggleOnlyBinding:
-    enabled: 0
-    axisList: []
-    keyList: 
-  emulateTouchPressure: 1
-  touchPressureBinding:
-    enabled: 0
-    targetList: []
 --- !u!1 &1498943060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4790662757524319177, guid: 907ebbf7a7931934ea193a93c9229485, type: 3}
@@ -60239,7 +57408,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: AddPromo
         m_Mode: 1
@@ -61731,11 +58900,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 711699236050769120, guid: 90a0dc12702f60844871d8400620b48b, type: 3}
   m_PrefabInstance: {fileID: 8471535852988164495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1732016749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149290, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
+  m_PrefabInstance: {fileID: 161865166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1732016761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409158, guid: a3d3e9322b030904995bcd87999ccfe6, type: 3}
   m_PrefabInstance: {fileID: 161865166}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732016762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732016749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d02adc56a5d947559b85da888df3d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1732016749}
+  cratePositions:
+  - {fileID: 2126114965}
+  - {fileID: 1354356751}
+  - {fileID: 301391877}
+  - {fileID: 286865040}
+  cratePositions1:
+  - {fileID: 1218298720}
+  - {fileID: 1969723048}
+  - {fileID: 1478071880}
+  - {fileID: 2015448623}
+  itemPositions:
+  - {fileID: 9078805}
+  - {fileID: 543394378}
+  - {fileID: 1352800822}
+  - {fileID: 1318772856}
+  crateCount: 0
+  currentBox: {fileID: 0}
+  playerBoxPos: {fileID: 6850822}
+--- !u!114 &1732016763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732016749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651b138978f93481198453676c65d9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 3
+  playerCamera: {fileID: 107861835}
 --- !u!1 &1732275526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3535416818872851779, guid: 9e9cd2351aed6b14892d2283f7be1856, type: 3}
@@ -63229,98 +60448,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 936288492301775246, guid: aa435ff693930444f82416cd4e047b81, type: 3}
   m_PrefabInstance: {fileID: 1770060662}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1772898224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772898225}
-  - component: {fileID: 1772898226}
-  m_Layer: 0
-  m_Name: TrackPad-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1772898225
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772898224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2143970927}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1772898226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772898224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33905c8b496b3e04ea9ab26ec3513c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreFingerRadius: 0
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 0
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
-  touchSmoothing: 0.5
-  pressBinding:
-    enabled: 0
-    axisList: []
-    keyList: 
-  horzSwipeBinding:
-    enabled: 1
-    targetList:
-    - separateAxes: 0
-      singleAxis: Mouse X
-      reverseSingleAxis: 0
-      positiveAxis: 
-      negativeAxis: 
-      positiveAxisAsPositive: 1
-      negativeAxisAsPositive: 1
-  vertSwipeBinding:
-    enabled: 1
-    targetList:
-    - separateAxes: 0
-      singleAxis: Mouse Y
-      reverseSingleAxis: 0
-      positiveAxis: 
-      negativeAxis: 
-      positiveAxisAsPositive: 1
-      negativeAxisAsPositive: 1
-  emulateTouchPressure: 1
-  touchPressureBinding:
-    enabled: 0
-    targetList: []
 --- !u!1 &1773569805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5712088508789026359, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
@@ -65035,7 +62162,7 @@ Transform:
   m_Children:
   - {fileID: 6775489804664068788}
   - {fileID: 900098190}
-  - {fileID: 532879863}
+  - {fileID: 706216968}
   m_Father: {fileID: 1868905654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1836884052
@@ -66934,6 +64061,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4347146789100376980, guid: a2de74a53df2ea943bad7aa3535ac8ef, type: 3}
   m_PrefabInstance: {fileID: 1865414690}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1867473800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400098, guid: 969d5b6e51c09b84c8976c3e49c52aa1, type: 3}
+  m_PrefabInstance: {fileID: 2065216407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868905653
 GameObject:
   m_ObjectHideFlags: 0
@@ -66964,7 +64096,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1151180468}
-  - {fileID: 775690596}
   - {fileID: 1836286449}
   - {fileID: 543450653452427903}
   - {fileID: 1717732613}
@@ -66982,7 +64113,6 @@ Transform:
   - {fileID: 1981031176}
   - {fileID: 1932112265}
   - {fileID: 690056632}
-  - {fileID: 1143968937}
   - {fileID: 1112560949}
   - {fileID: 813821883}
   - {fileID: 197446900}
@@ -68299,9 +65429,9 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: SetCratePosition1
+        m_MethodName: SetCratePosition
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1890776510}
@@ -68337,160 +65467,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.76, y: 0.39, z: 0.73}
   m_Center: {x: 0, y: -0.05927822, z: 0}
---- !u!1 &1892363529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1892363530}
-  - component: {fileID: 1892363533}
-  - component: {fileID: 1892363532}
-  - component: {fileID: 1892363531}
-  m_Layer: 0
-  m_Name: Jump-Button-Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1892363530
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892363529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1497501593}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1892363531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892363529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 1497501594}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: 175fc87678189ab4cb9f487e21bb71fc, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spritePressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.25
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteToggled:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteToggledAndPressed:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.3
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
---- !u!114 &1892363532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892363529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 175fc87678189ab4cb9f487e21bb71fc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1892363533
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892363529}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1893150542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72638,9 +69614,9 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: SetCratePosition1
+        m_MethodName: SetCratePosition
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1960367987}
@@ -72696,37 +69672,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100118, guid: 1089a793ce2490548ba33e2b6ba83d82, type: 3}
   m_PrefabInstance: {fileID: 771604976}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1964543182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1964543183}
-  m_Layer: 0
-  m_Name: Pivot
-  m_TagString: Untagged
-  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1964543183
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964543182}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 476284237}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1966215483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 71528385150724199, guid: 62a303fd94f039641b67805d51c7104e, type: 3}
@@ -72843,70 +69788,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8718188147080092903, guid: e570a12b3229ed04883d800f0331d716, type: 3}
   m_PrefabInstance: {fileID: 3948824878264194335}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1976689217
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1976689218}
-  - component: {fileID: 1976689219}
-  m_Layer: 0
-  m_Name: Joystick-0-Region
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1976689218
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976689217}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2118888448}
-  m_Father: {fileID: 2143970927}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1976689219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976689217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371d284a20ca80145bc6ca05d372bb96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreFingerRadius: 1
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 0
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
 --- !u!1 &1977345262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2436192163188940325, guid: 85aa2a9080fa0eb419e8367eafbb6b34, type: 3}
@@ -73179,7 +70060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508789026359, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_TagString
-      value: note20
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508940745141, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_Layer
@@ -74480,7 +71361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1151180470}
         m_TargetAssemblyTypeName: SupermarketLevelsManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ChangeToPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74492,7 +71373,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2023286844}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74504,7 +71385,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74514,9 +71395,9 @@ MonoBehaviour:
           m_StringArgument: Go and pick up the crates.
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SetPositionOfPlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2023286845}
@@ -74528,7 +71409,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1773569805}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74565,8 +71446,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &2023286847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75782,6 +72661,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400094, guid: 969d5b6e51c09b84c8976c3e49c52aa1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 274299820}
+    - targetCorrespondingSourceObject: {fileID: 400098, guid: 969d5b6e51c09b84c8976c3e49c52aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6850822}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100114, guid: 969d5b6e51c09b84c8976c3e49c52aa1, type: 3}
       insertIndex: -1
@@ -76240,7 +73122,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2079283660}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76252,7 +73134,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 147328829}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76264,7 +73146,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1451724215}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76276,7 +73158,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1075691343}
         m_TargetAssemblyTypeName: SimpleMessageHandler, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ShowMessage
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76288,7 +73170,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1460767272}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76301,8 +73183,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &2079283663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77348,7 +74228,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2100296818}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77360,7 +74240,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1981031175}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77372,7 +74252,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 614038813}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77384,7 +74264,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 813821882}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77396,7 +74276,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1112560947}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77421,8 +74301,6 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnterTag: note20
-  ExitTag: 
 --- !u!65 &2100296821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77746,213 +74624,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3254097931432979106, guid: 815f2c1d50616724280165edd407d062, type: 3}
   m_PrefabInstance: {fileID: 6725960043670548709}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2118888447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2118888448}
-  - component: {fileID: 2118888449}
-  m_Layer: 0
-  m_Name: Joystick-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2118888448
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118888447}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 750824453}
-  - {fileID: 1357557437}
-  m_Father: {fileID: 1976689218}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2118888449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118888447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294a8c1378026744583a542cf9af0572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreFingerRadius: 0
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 2
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
-  fadeOutWhenReleased: 1
-  startFadedOut: 1
-  fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
-  centerOnDirectTouch: 1
-  centerOnIndirectTouch: 1
-  centerWhenFollowing: 0
-  stickyMode: 1
-  clampInsideRegion: 1
-  clampInsideCanvas: 1
-  returnToStartingPosition: 0
-  directInitialVector: {x: 0, y: 0}
-  indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.1
-  originSmoothTime: 0.5
-  targetDynamicRegion: {fileID: 1976689219}
-  config:
-    analogDeadZone: 0.1
-    analogEndZone: 1
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    clampMode: 1
-    perAxisDeadzones: 0
-    stickMode: 0
-    originalDirResetMode: 0
-    angularMagnet: 0.5
-    digitalDetectionMode: 0
-    blockX: 0
-    blockY: 0
-  pressBinding:
-    enabled: 0
-    axisList: []
-    keyList: 
-  joyStateBinding:
-    enabled: 1
-    horzAxisBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Horizontal
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    vertAxisBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Vertical
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    dirBinding:
-      enabled: 0
-      bindDiagonals: 1
-      bindMode: 0
-      dirBindingU:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingUR:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingR:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingDR:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingD:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingDL:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingL:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingUL:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingN:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingAny:
-        enabled: 0
-        axisList: []
-        keyList: 
-  emulateTouchPressure: 1
-  touchPressureBinding:
-    enabled: 0
-    targetList: []
 --- !u!1 &2123256340
 GameObject:
   m_ObjectHideFlags: 0
@@ -80181,85 +76852,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3797277044488024539, guid: 647d85ef8b91620499de03cdd3c56ed5, type: 3}
   m_PrefabInstance: {fileID: 8258000525200211569}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2143970926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2143970927}
-  - component: {fileID: 2143970930}
-  - component: {fileID: 2143970929}
-  - component: {fileID: 2143970928}
-  m_Layer: 0
-  m_Name: CF2-Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2143970927
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143970926}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1497501593}
-  - {fileID: 1976689218}
-  - {fileID: 1772898225}
-  m_Father: {fileID: 1470620664}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2143970928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143970926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0df8f6cb3d9d74abaf8582e7b07070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &2143970929
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143970926}
-  m_CullTransparentMesh: 1
---- !u!114 &2143970930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143970926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81705b1c486dc3b468f7cc553a648228, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToRig: 1
-  rig: {fileID: 532879862}
 --- !u!4 &2145761018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2756877740478439101, guid: 9cba329de8ed88446923db1dbb36ae2f, type: 3}
@@ -96266,7 +92858,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: SetCratePosition
         m_Mode: 2
@@ -116357,7 +112949,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: SetCratePosition
         m_Mode: 2
@@ -117588,7 +114180,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: SetCratePosition
         m_Mode: 2
@@ -156317,7 +152909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508789026359, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_TagString
-      value: note20
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5712088508940745141, guid: a333afaa2016d504aa0831cf3544672c, type: 3}
       propertyPath: m_Layer
@@ -163439,7 +160031,7 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1732016762}
         m_TargetAssemblyTypeName: PlayerControllerSupermarket, Assembly-CSharp
         m_MethodName: SetCratePosition
         m_Mode: 2
@@ -164635,7 +161227,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1868905654}
-  - {fileID: 1161494339}
   - {fileID: 7806704195709467080}
   - {fileID: 2140688799}
   - {fileID: 623999676}

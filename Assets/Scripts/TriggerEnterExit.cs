@@ -6,22 +6,20 @@ using UnityEngine.Events;
 public class TriggerEnterExit : MonoBehaviour
 {
     public UnityEvent OnTriggerEnterEvent, OnTriggerExitEvent;
-    public string EnterTag, ExitTag;
+    //public string EnterTag, ExitTag;
     private void OnTriggerEnter(Collider other)
     {
-        if (!string.IsNullOrEmpty(EnterTag))
-            if (other.CompareTag(EnterTag))
-            {
-                OnTriggerEnterEvent.Invoke();
-            }
+        if (other.CompareTag("Player"))
+        {
+            OnTriggerEnterEvent.Invoke();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!string.IsNullOrEmpty(ExitTag))
-            if (other.CompareTag(ExitTag))
-            {
-                OnTriggerExitEvent.Invoke();
-            }
+        if (other.CompareTag("Player"))
+        {
+            OnTriggerExitEvent.Invoke();
+        }
     }
 }

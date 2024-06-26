@@ -14,9 +14,14 @@
     "defineConstraints": [],
     "versionDefines": [
         {
-            "name": "com.unity.modules.unitywebrequest",
+            "name": "com.unity.modules.physics2d",
             "expression": "",
-            "define": "UNITY_WEB_REQUEST"
+            "define": "UNITY_PHYSICS_2D"
+        },
+        {
+            "name": "com.unity.modules.physics",
+            "expression": "",
+            "define": "UNITY_PHYSICS"
         },
         {
             "name": "com.unity.textmeshpro",
@@ -24,14 +29,9 @@
             "define": "UNITY_TMPRO"
         },
         {
-            "name": "com.unity.ugui",
+            "name": "com.unity.xr.interaction.toolkit",
             "expression": "",
-            "define": "UNITY_GUI"
-        },
-        {
-            "name": "com.unity.modules.ui",
-            "expression": "",
-            "define": "UNITY_UI"
+            "define": "UNITY_XRI"
         }
     ],
     "noEngineReferences": false

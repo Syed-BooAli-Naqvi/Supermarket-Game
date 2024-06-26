@@ -85,8 +85,7 @@ public class ConvertedScript
 		warningFragments,
 		errorFragments;
 
-	private List<TextBlock>	commentBlocks;
-	private List<TextBlock>	enumDefinitionBlocks;
+	private List<CommentBlock>	commentBlocks;
 
 
 	static string 
@@ -105,7 +104,7 @@ public class ConvertedScript
 			
 		REGEX_TYPE_SPECIFIER_START_ANCHOR_CLASS 	= "[" + WHITESPACE_CHARS + @"\(\:\;\,\{" + "]",
 		REGEX_TYPE_SPECIFIER_END_ANCHOR_CLASS 		= "[" + WHITESPACE_CHARS + @"\)\;" + "]",
- 
+
 		//REGEX_BLOCK_COMMENT				= @"(?:\/\*(?:.|\n)*?(?:\*\/))",
 		//REGEX_LINE_COMMENT				= @"(?:\/\/.+?\n)",
 
@@ -116,8 +115,6 @@ public class ConvertedScript
 		REGEX_INT_PARAM					= @"^(?:" + REGEX_OPTIONAL_WS + "([0-9]+)" + REGEX_OPTIONAL_WS  + @")\z",
 		REGEX_KEYCODE_ENUM_PARAM		= @"^(?:" + REGEX_OPTIONAL_WS + "KeyCode" + REGEX_OPTIONAL_WS + "\\." + REGEX_OPTIONAL_WS + "([a-zA-Z0-9]+)" + REGEX_OPTIONAL_WS + @")\z",
 
-
-		REGEX_ENUM_DEF_BLOCK				= @"(?:" + REGEX_WS_CLASS + ")" + "enum" + REGEX_WS_CLASS+"+" + "[" + WHITESPACE_CHARS + @"\:\w\d]+" + @"\{" + @"[^\}]+\}", 
 
 		REGEX_INPUT_CLASSNAMES 			= @"(?:Input|CrossPlatformInputManager|CFInput|(?:UnityEngine" + REGEX_DOT_OPERATOR + "Input))",
 		REGEX_SCREEN_CLASSNAMES 		= @"(?:Screen|UnityEngine" + REGEX_DOT_OPERATOR + "Screen)",
@@ -194,8 +191,7 @@ public class ConvertedScript
 		regexDontConvertTagOnly,
 		regexDontConvertTagWithOptionalComment;
 		
-
-
+		
 
 	// ------------------------
 	// (0 = dummy)(1 = class)(2 = dot)(3 = method)(4 = dummy)(5=params)(6=dummy)	
@@ -238,15 +234,14 @@ public class ConvertedScript
 	// ------------------------	
 	public ConvertedScript()
 		{
-		this.originalCode				= "";
-		this.sanitizedCode			= "";
-		this.modifiedCode				= new StringBuilder();
-		this.commentBlocks			= new List<TextBlock>();
-		this.enumDefinitionBlocks	= new List<TextBlock>();
-		this.fragments					= new List<Fragment>();
-		this.okFragments				= new List<Fragment>();
-		this.warningFragments		= new List<Fragment>();
-		this.errorFragments			= new List<Fragment>();
+		this.originalCode		= "";
+		this.sanitizedCode	= "";
+		this.modifiedCode		= new StringBuilder();
+		this.commentBlocks		= new List<CommentBlock>();
+		this.fragments			= new List<Fragment>();
+		this.okFragments		= new List<Fragment>();
+		this.warningFragments	= new List<Fragment>();
+		this.errorFragments		= new List<Fragment>();
 		}
 
 			
@@ -435,7 +430,6 @@ string[] keycodeParams = new string[]
 //DBBox("Comments");
 			
 		this.CollectCommentBlocks();
-		this.CollectEnumDefinitionBlocks();
 //DBBox("frags");
 
 		this.CollectFragments();
@@ -458,10 +452,8 @@ string[] keycodeParams = new string[]
 	// -------------------------	
 	public void ProcessTextFile(string filename)
 		{
-#if !UNITY_WEBPLAYER
 		string originalCode = System.IO.File.ReadAllText(filename); 
 		ProcessText(originalCode, GetScriptLang(filename));
-#endif
 		}
 		
 
@@ -517,7 +509,7 @@ string[] keycodeParams = new string[]
 		// Init comment blocks...
 
 		if (this.commentBlocks == null)
-			this.commentBlocks = new List<TextBlock>(64);
+			this.commentBlocks = new List<CommentBlock>(64);
 		else
 			this.commentBlocks.Clear();
 
@@ -630,13 +622,10 @@ string[] keycodeParams = new string[]
 			if (!this.IsTypeSupported(typeName))
 				return null;
 	
-			Fragment frag = new Fragment(ModType.InputType, m, m);
+			Fragment frag = new Fragment(ModType.InputType, m);
 		
 			frag.originalFrag	= script.GetOriginalCaptureValue(m);
 			frag.modifiedFrag	= script.GetOriginalCaptureValue(m);
-			frag.fullOriginalFrag	= script.GetOriginalCaptureValue(m);
-			frag.fullModifiedFrag	= script.GetOriginalCaptureValue(m);
-
 			frag.usedClass		= m.Groups["namespace"].Value;
 			frag.usedFunction	= typeName;
 	
@@ -669,10 +658,6 @@ string[] keycodeParams = new string[]
 					}
 				}		
 //return null;
-	
-			frag.fullOriginalFrag = frag.originalFrag;
-			frag.fullModifiedFrag = frag.modifiedFrag;
-
 			return frag;
 			}
 				
@@ -692,9 +677,6 @@ string[] keycodeParams = new string[]
 					foreach (Match m in typeMatches)
 						{
 						if (script.IsMatchCommentedOut(m))
-							continue;
-
-						if (script.IsMatchInsideEnumDefinition(m))
 							continue;
 
 //Debug.Log("TYPE match[" + (matchNum++) + "] ["+ m.Value+"] line[" + ControlFreak2.CFUtils.GetLineNumber(script.originalCode, m.Index) + "]");
@@ -739,28 +721,11 @@ string[] keycodeParams = new string[]
 		// -------------------
 		abstract public bool IsMethodSupported		(string name);	//	{ return (this.GetMethodDesc(name) != null); }
 		abstract public bool IsMethodIgnored		(string name);	//	{ return FindStringInArray(this.GetIgnoredMethods(), name); }
-
-		// -----------------
-		virtual public ProblemType IsMethodUnsupported	(string name)
-			{
-			if (!IsMethodSupported(name)) 
-				return ProblemType.Unsupported_Method;
-			
-			return ProblemType.None;
-			}
-			
+		abstract public ProblemType IsMethodUnsupported	(string name);	//	{ return
  
 		abstract public bool IsPropertySupported	(string name);	//	{ return FindStringInArray(this.GetSupportedProperties(), name); }
 		abstract public bool IsPropertyIgnored		(string name);	//	{ return FindStringInArray(this.GetIgnoredProperties(), name); }
-
-		// -----------------
-		virtual public ProblemType IsPropertyUnsupported	(string name)
-			{
-			if (!IsPropertySupported(name))
-				return ProblemType.Unsupported_Property;
-
-			return ProblemType.None;
-			}
+		abstract public ProblemType IsPropertyUnsupported	(string name);	//	{ return
 	
 
 
@@ -777,17 +742,11 @@ string[] keycodeParams = new string[]
 			string methodName = script.GetOriginalCaptureValue(m.Groups["method"]); //.Value;
 			if (this.IsMethodIgnored(methodName))
 				return null;	
-			if (this.IsMethodUnsupported(methodName) != ProblemType.None) 
-				return null;
 	
-			var classCaptureGroup = m.Groups["class"];
-			if (!classCaptureGroup.Success || (classCaptureGroup.Captures.Count != 1))
-				return null;	// ??!
-
-			Fragment frag = new Fragment(this.GetMethodModType(), m, classCaptureGroup);
+			Fragment frag = new Fragment(this.GetMethodModType(), m);
 		
-			frag.originalFrag	= script.GetOriginalCaptureValue(classCaptureGroup); //.Value;
-			frag.modifiedFrag	= this.GetConvertedClassName(); //script.GetOriginalCaptureValue(m); //.Value;
+			frag.originalFrag	= script.GetOriginalCaptureValue(m); //.Value;
+			frag.modifiedFrag	= script.GetOriginalCaptureValue(m); //.Value;
 			frag.usedClass		= script.GetOriginalCaptureValue(m.Groups["class"]); //.Value;
 			frag.usedFunction	= methodName;
 			frag.usedParameter	= script.GetOriginalCaptureValue(m.Groups["params"]); //.Value;
@@ -817,22 +776,22 @@ string[] keycodeParams = new string[]
 	
 			if ((frag.problem == ProblemType.None) && (frag.warning == ConvertedScript.WarningType.None))
 				{
-				frag.fullModifiedFrag = "";
+				frag.modifiedFrag = "";
 				
 				for (int i = 1; i < m.Groups.Count; ++i)
 					{
 					string groupName = regex.GroupNameFromNumber(i);
 					if (groupName == "class")
-						frag.fullModifiedFrag += this.GetConvertedClassName();
+						frag.modifiedFrag += this.GetConvertedClassName();
 		
 					else if (groupName == "method")
-						frag.fullModifiedFrag += frag.usedFunction;
+						frag.modifiedFrag += frag.usedFunction;
 		
 					else if (groupName == "params")
-						frag.fullModifiedFrag += frag.usedParameter;
+						frag.modifiedFrag += frag.usedParameter;
 		
 					else 
-						frag.fullModifiedFrag += script.GetOriginalCaptureValue(m.Groups[i]); //.Value;			
+						frag.modifiedFrag += script.GetOriginalCaptureValue(m.Groups[i]); //.Value;			
 		
 		//Debug.Log("\t\tgr["+i+"]["+groupName+"] \t["  + m.Groups[i].Value + "] \t->[" + frag.modifiedFrag + "]");
 					}
@@ -849,15 +808,11 @@ string[] keycodeParams = new string[]
 			string propertyName = script.GetOriginalCaptureValue(m.Groups["prop"]); //.Value;
 			if (this.IsPropertyIgnored(propertyName))
 				return null;
-
-			var classCaptureGroup = m.Groups["class"];
-			if (!classCaptureGroup.Success || (classCaptureGroup.Captures.Count != 1))
-				return null;	// ??!
 	
-			Fragment frag = new Fragment(this.GetPropModType(), m, classCaptureGroup);
+			Fragment frag = new Fragment(this.GetPropModType(), m);
 		
-			frag.originalFrag	= script.GetOriginalCaptureValue(classCaptureGroup); 
-			frag.modifiedFrag	= this.GetConvertedClassName(); 
+			frag.originalFrag	= script.GetOriginalCaptureValue(m); //.Value;
+			frag.modifiedFrag	= script.GetOriginalCaptureValue(m); //.Value;
 			frag.usedClass		= m.Groups["class"].Value;
 			frag.usedFunction	= propertyName;
 	
@@ -875,15 +830,15 @@ string[] keycodeParams = new string[]
 				
 			if ((frag.problem == ProblemType.None) && (frag.warning == ConvertedScript.WarningType.None))
 				{
-				frag.fullModifiedFrag = "";
+				frag.modifiedFrag = "";
 		
 				for (int i = 1; i < m.Groups.Count; ++i)
 					{
 					string groupName = regex.GroupNameFromNumber(i);
 					if (groupName == "class")
-						frag.fullModifiedFrag += this.GetConvertedClassName();
+						frag.modifiedFrag += this.GetConvertedClassName();
 					else 
-						frag.fullModifiedFrag += script.GetOriginalCaptureValue(m.Groups[i]); //.Value;			
+						frag.modifiedFrag += script.GetOriginalCaptureValue(m.Groups[i]); //.Value;			
 					}
 				}		
 			
@@ -980,8 +935,8 @@ string[] keycodeParams = new string[]
 			{
 			if (FindStringInArray(mControlFreak1Methods, name))
 				return ProblemType.Control_Freak_1_Feature;
-	
-			return base.IsMethodUnsupported(name);
+
+			return ProblemType.None;
 			} 
 
 
@@ -991,7 +946,7 @@ string[] keycodeParams = new string[]
 			if (FindStringInArray(mControlFreak1Props, name))
 				return ProblemType.Control_Freak_1_Feature;
 
-			return base.IsPropertyUnsupported(name);
+			return ProblemType.None;
 			}
 
 
@@ -1063,9 +1018,7 @@ string[] keycodeParams = new string[]
 			"location",
 			"multiTouchEnabled",
 			"touchSupported",
-			"mousePresent",
-			"stylusTouchSupported",
-			"touchPressureSupported",	
+			"mousePresent"
 			};
 			
 		// ----------------
@@ -1119,8 +1072,8 @@ string[] keycodeParams = new string[]
 		override public bool IsPropertySupported	(string name)	{ return FindStringInArray(mSupportedProps, name); }
 		override public bool IsPropertyIgnored		(string name)	{ return FindStringInArray(mIgnoredProps, name); }
 
-		//override public ProblemType IsMethodUnsupported		(string name)	{ return ProblemType.None; } 
-		//override public ProblemType IsPropertyUnsupported	(string name)	{ return ProblemType.None; }
+		override public ProblemType IsMethodUnsupported		(string name)	{ return ProblemType.None; } 
+		override public ProblemType IsPropertyUnsupported	(string name)	{ return ProblemType.None; }
 	
 
 		// ---------------------
@@ -1144,8 +1097,7 @@ string[] keycodeParams = new string[]
 			"dpi",
 			"lockCursor",
 			"showCursor",
-			"fullScreen",
-			"fullScreenMode",		
+			"fullScreen"		
 			};
 	
 		// ---------------
@@ -1161,10 +1113,7 @@ string[] keycodeParams = new string[]
 			//"fullScreen",
 			"orientation",
 			"resolutions",
-			"sleepTimeout",
-			"brightness",
-			"safeArea",	
-			"cutouts",
+			"sleepTimeout"				
 			};
 
 
@@ -1206,6 +1155,8 @@ string[] keycodeParams = new string[]
 		override public bool IsPropertySupported	(string name)	{ return FindStringInArray(mSupportedProps, name); }
 		override public bool IsPropertyIgnored		(string name)	{ return FindStringInArray(mIgnoredProps, name); }
 
+		override public ProblemType IsMethodUnsupported		(string name)	{ return ProblemType.None; } 
+		override public ProblemType IsPropertyUnsupported	(string name)	{ return ProblemType.None; }
 	
 
 		// ---------------------
@@ -1523,46 +1474,6 @@ string[] keycodeParams = new string[]
 		AltString
 		}
 
-
-
-	// -------------------
-	private void CollectEnumDefinitionBlocks()
-		{
-		this.enumDefinitionBlocks.Clear();
-
-
-		string code = this.originalCode;
-
-		Regex enumDefRegex = new Regex(REGEX_ENUM_DEF_BLOCK, RegexOptions.Multiline);
-
-		int matchCount = 0;
-		int startChar = 0;
-		do 
-			{
-			Match m = enumDefRegex.Match(code, startChar);
-			if (m == null || !m.Success) break;
-
-			//Debug.LogFormat("Match [{0}] = start:{1} len:{2} cont:[{3}]\n", matchCount, m.Index, m.Length, m.Value);
-			++matchCount;
-
-			this.enumDefinitionBlocks.Add(new TextBlock(m));
-
-			startChar = m.Index + m.Length;
-			}
-		while (true);
-		}
-
-
-	// -------------------
-	private bool IsMatchInsideEnumDefinition(Match m)
-		{
-		return TextBlock.CheckMatch(this.enumDefinitionBlocks, m);
-		}
-
-
-
-
-
 	// -------------------
 	private void CollectCommentBlocks()
 		{
@@ -1647,7 +1558,7 @@ string[] keycodeParams = new string[]
 					((blockType == CodeBlockType.LineComment)	&& (curC == '\n')) )
 					{
 					blockOpen = false;
-					this.commentBlocks.Add(new TextBlock(blockStart, (i - blockStart)));
+					this.commentBlocks.Add(new CommentBlock(blockStart, (i - blockStart)));
 					}					 
 				}
 
@@ -1658,7 +1569,7 @@ string[] keycodeParams = new string[]
 		// Add unclosed block...
 
 		if (blockOpen)
-			this.commentBlocks.Add(new TextBlock(blockStart, (this.originalCode.Length - blockStart)));
+			this.commentBlocks.Add(new CommentBlock(blockStart, (this.originalCode.Length - blockStart)));
 		
 
 	
@@ -1689,10 +1600,15 @@ string[] keycodeParams = new string[]
 	// -------------------
 	private bool IsMatchCommentedOut(Match m)
 		{
-		return TextBlock.CheckMatch(this.commentBlocks, m);
+		int count = this.commentBlocks.Count;
+		for (int i = 0; i < count; ++i)
+			{
+			if (this.commentBlocks[i].IsMatchCommentedOut(m))
+				return true;
+			}
+
+		return false;
 		}
-
-
 		
 		
 	// -------------------
@@ -1886,11 +1802,7 @@ string[] keycodeParams = new string[]
 					originalPos = frag.filePos;	
 					}
 					
-				if (frag.IsValid())
-					this.modifiedCode.Append(frag.modifiedFrag);			
-				else
-					this.modifiedCode.Append(frag.originalFrag);
-
+				this.modifiedCode.Append(frag.modifiedFrag);			
 				originalPos = frag.filePos + frag.originalFrag.Length;
 					 
 				++curFragId;
@@ -1918,42 +1830,28 @@ string[] keycodeParams = new string[]
 	
 	
 	// ----------------------
-	private struct TextBlock
+	private struct CommentBlock
 		{
 		public int index, len;
 	
 		// -----------------------
-		public TextBlock(Match m)
+		public CommentBlock(Match m)
 			{
 			this.index	= m.Index;
 			this.len	= m.Length;
 			}
 
 		// -----------------
-		public TextBlock(int index, int len)
+		public CommentBlock(int index, int len)
 			{
 			this.index = index;
 			this.len = len;
 			}
 			
 		// ------------------------
-		public bool IsMatchInside(Match m)
+		public bool IsMatchCommentedOut(Match m)
 			{
 			return ((m == null) || ((m.Index >= this.index) && ((m.Index + m.Length) < (this.index + this.len))));
-			}
-
-
-		// ---------------
-		static public bool CheckMatch(List<TextBlock> blocks, Match m)
-			{
-			int count = blocks.Count;
-			for (int i = 0; i < count; ++i)
-				{
-				if (blocks[i].IsMatchInside(m))
-					return true;
-				}
-
-			return false;
 			}
 		}
 		
@@ -1984,8 +1882,6 @@ string[] keycodeParams = new string[]
 		public ModType		modType;
 		public string		originalFrag;
 		public string		modifiedFrag;
-		public string		fullOriginalFrag;		// Full capture
-		public string		fullModifiedFrag;		// Full modified capture
 		public string		usedClass;
 		public string		usedFunction;
 		public string		usedParameter;
@@ -1994,23 +1890,13 @@ string[] keycodeParams = new string[]
 		public int			filePos;
 	
 		
-		// ---------------
-		public bool IsValid()
-			{
-			return ((this.problem == ProblemType.None) && (this.warning == WarningType.None));
-			}
 	
 		// --------------------
-		public Fragment(ModType modType, Match match, Capture classCapture)
+		public Fragment(ModType modType, Match match)
 			{
 			this.modType = modType;	
-			this.filePos = classCapture.Index;
-			this.originalFrag = classCapture.Value;	
-			this.modifiedFrag = this.originalFrag;
-
-			this.fullOriginalFrag = match.Value;
-			this.fullModifiedFrag = this.fullOriginalFrag;
-
+			this.filePos = match.Index;
+			this.originalFrag = match.Value;	
 	
 	//			this.filePos = match
 			}
@@ -2039,7 +1925,7 @@ string[] keycodeParams = new string[]
 					break;
 
 				default :
-					s += "Other mod.\t[" + this.fullOriginalFrag.Replace("\n", " ") + "]";
+					s += "Other mod.\t[" + this.originalFrag.Replace("\n", " ") + "]";
 					break;
 				}
 

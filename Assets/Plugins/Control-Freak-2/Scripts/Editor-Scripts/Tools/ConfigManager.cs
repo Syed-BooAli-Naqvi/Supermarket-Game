@@ -1,6 +1,6 @@
 ﻿// -------------------------------------------
 // Control Freak 2
-// Copyright (C) 2013-2021 Dan's Game Tools
+// Copyright (C) 2013-2020 Dan's Game Tools
 // http://DansGameTools.blogspot.com
 // -------------------------------------------
 
@@ -257,10 +257,7 @@ public class ConfigManager : EditorWindow
 
 	// ----------
 	static public void RemoveSymbol(string symbol, UnityEditor.BuildTargetGroup tgt)
-		{
-		if (!IsBuildTargetGroupSupported(tgt))
-			return;
-		
+		{	
 		string symbolsStr = "";
 
 		string[] symbols = GetSymbols(tgt);

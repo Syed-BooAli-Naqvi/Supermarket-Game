@@ -1,6 +1,6 @@
 // -------------------------------------------
 // Control Freak 2
-// Copyright (C) 2013-2021 Dan's Game Tools
+// Copyright (C) 2013-2020 Dan's Game Tools
 // http://DansGameTools.blogspot.com
 // -------------------------------------------
 
@@ -45,22 +45,19 @@ public class Installer : EditorWindow
 		DIALOG_TITLE		= "Control Freak 2 Installer",	
 		DIALOG_SHORT_TITLE	= "CF2 Installer",
 
-		ONLINE_DOCS_URL		= "https://dansgametools.blogspot.com/p/docs.html",
+		ONLINE_DOCS_URL		= "http://dgtdocs.000webhostapp.com/",
 		WEBSITE_URL				= "http://dansgametools.blogspot.com/",
 		VIDEO_TUTORIALS_URL 	= "https://www.youtube.com/playlist?list=PLrXZsI52MMml0io_4nWs47RDZvudZyMmt",
 
 		PLAYMAKER_ADD_ON_PATH 		= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-Playmaker.unitypackage",
-		UFE_2_4_ADD_ON_PATH 			= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-UFE-2-4.unitypackage",
 		UFE_ADD_ON_PATH 				= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-UFE.unitypackage",
 		UFE_HACKY_ADD_ON_PATH 		= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-UFE-Hack.unitypackage",
 		UFPS_ADD_ON_PATH 				= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-UFPS.unitypackage",
 		UNITZ_UNET_ADD_ON_PATH		= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-UnitZ-UNet.unitypackage",
 		//OPSIVE_TPC_ADD_ON_PATH 		= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-Opsive-TPC.unitypackage",	
 		OPSIVE_TPC_1_DL_URL				= "http://opsive.com/assets/ThirdPersonController/integrations.php",
-		CINEMACHINE_ADD_ON_PATH 		= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-Cinemachine.unitypackage",
 
-
-		OPSIVE_TPC_2_DL_URL				= "https://opsive.com/downloads/", // "https://opsive.com/downloads/?pid=926",
+		OPSIVE_TPC_2_DL_URL				= "https://opsive.com/downloads/?pid=926",
 		OPSIVE_GENERAL_DL_URL				= "https://opsive.com/solutions/character-solution/",
 
 		CF1_MIGRATION_ADD_ON_PATH	= "Assets/Plugins/Control-Freak-2/Add-Ons/CF2-CF1-Migration-Tools.unitypackage";
@@ -78,13 +75,11 @@ public class Installer : EditorWindow
 		inputAxesPresent,
 
 		newUfePresent,
-		ufe2Present, 
 		oldUfePresent,
 		opsiveTpcPresent,
 		playmakerPresent,
 		ufpsPresent,
 		unitzUnetPresent,
-		cinemachinePresent,
 		controlFreak1Present;
 		//evpPresent;
 
@@ -129,10 +124,6 @@ public class Installer : EditorWindow
 			(CFEditorUtils.FindClass("Opsive.ThirdPersonController.Wrappers.RigidbodyCharacterController") != null) ||
 			(CFEditorUtils.FindClass("Opsive.ThirdPersonController.RigidbodyCharacterController") != null);
 
-		this.ufe2Present = 
-			((CFEditorUtils.FindClass("UFE3D.UFEController") != null) && 
-			 (CFEditorUtils.FindClass("UFE3D.InputTouchControllerBridge") != null));
-
 		this.newUfePresent = 
 			((CFEditorUtils.FindClass("UFEController") != null) && 
 			 (CFEditorUtils.FindClass("InputTouchControllerBridge") != null));
@@ -145,9 +136,6 @@ public class Installer : EditorWindow
 		this.unitzUnetPresent = 
 			((CFEditorUtils.FindClass("UnitZManager") != null)); 
 		
-		this.cinemachinePresent =
-			(CFEditorUtils.FindClass("Cinemachine.AxisState") != null);
-
 
 
 		this.platformOptionList.Refresh();
@@ -426,16 +414,12 @@ public class Installer : EditorWindow
 		AddMenuItem(menu, new GUIContent("Install \'UFPS - Ultimate FPS\' 1.x Add-On..."), this.InstallUfpsAddOn, this.ufpsPresent);
 		AddMenuItem(menu, new GUIContent("Download \'Opsive Third Person Controller\' 1.x Add-On..."), this.InstallOpsiveTpcAddOn, this.opsiveTpcPresent);
 
-		if (this.oldUfePresent)
-			AddMenuItem(menu, new GUIContent("Install \'Universal Fighting Engine\' Hack Add-On..."), this.InstallHackyUfeAddOn, this.oldUfePresent);
-		else if (this.newUfePresent)
+		if (this.newUfePresent)
 			AddMenuItem(menu, new GUIContent("Install \'Universal Fighting Engine\' Official Add-On..."), this.InstallUfeAddOn, this.newUfePresent);
 		else 
-			AddMenuItem(menu, new GUIContent("Install \'Universal Fighting Engine 2.4.1+\' Add-On..."), this.InstallUfe2AddOn, this.ufe2Present);
+			AddMenuItem(menu, new GUIContent("Install \'Universal Fighting Engine\' Hack Add-On..."), this.InstallHackyUfeAddOn, this.oldUfePresent);
 
 		AddMenuItem(menu, new GUIContent("Install \'UnitZ UNET\' Add-On... (Unity 5.5+ only)"), this.InstallUnitZAddOn, this.unitzUnetPresent);
-
-		AddMenuItem(menu, new GUIContent("Install \'Cinemachine\' Add-On..."), this.InstallCinemachineAddOn, this.cinemachinePresent);
 
 
 		menu.ShowAsContext();
@@ -448,10 +432,7 @@ public class Installer : EditorWindow
 	private void InstallPlaymakerAddOn()		{ 	AssetDatabase.ImportPackage(PLAYMAKER_ADD_ON_PATH,		DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
 	private void InstallUfpsAddOn()				{ 	AssetDatabase.ImportPackage(UFPS_ADD_ON_PATH,			DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
 	private void InstallUfeAddOn()				{ 	AssetDatabase.ImportPackage(UFE_ADD_ON_PATH,				DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
-	private void InstallUfe2AddOn()				{ 	AssetDatabase.ImportPackage(UFE_2_4_ADD_ON_PATH,		DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
 	private void InstallUnitZAddOn()				{ 	AssetDatabase.ImportPackage(UNITZ_UNET_ADD_ON_PATH,	DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
-	private void InstallCinemachineAddOn()		{ 	AssetDatabase.ImportPackage(CINEMACHINE_ADD_ON_PATH,	DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
-
 	private void InstallOpsiveTpcAddOn()		{ 	Application.OpenURL(OPSIVE_TPC_1_DL_URL); } //AssetDatabase.ImportPackage(OPSIVE_TPC_ADD_ON_PATH, DONT_SHOW_ADD_ON_PACKAGE_IMPORT_WINDOW); }
 
 

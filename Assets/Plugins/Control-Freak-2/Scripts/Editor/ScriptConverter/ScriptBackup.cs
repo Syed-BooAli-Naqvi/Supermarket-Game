@@ -1,5 +1,4 @@
-#if UNITY_EDITOR && !UNITY_WEBPLAYER
-
+#if UNITY_EDITOR 
 
 using UnityEngine;
 using UnityEditor;
@@ -220,7 +219,6 @@ public class ScriptBackup : EditorWindow
 		// ----------------
 		private void CollectFiles()
 			{
-#if !UNITY_WEBPLAYER
 
 			EditorUtility.DisplayProgressBar(DIALOG_TITLE, "Collecting files...", 0);
 
@@ -247,7 +245,7 @@ public class ScriptBackup : EditorWindow
 			EditorUtility.ClearProgressBar();
 
 			this.treeView.InvalidateUpwards(true);
-#endif
+
 			}
 
 		// -------------------
@@ -431,28 +429,20 @@ public class ScriptBackup : EditorWindow
 		// --------------------
 		public void ViewBackupFile()
 			{
-#if !UNITY_WEBPLAYER
 			System.Diagnostics.Process.Start(this.pathIn);
-#endif
 			}
 
 
 		// -------------------
 		public void ViewCurrentFile()
 			{
-#if !UNITY_WEBPLAYER
 			System.Diagnostics.Process.Start(this.pathOut);
-#endif
 			}
 
 
 		// ---------------------
 		static public BackupFileElem Create(string filename, string relFilename, BackupConfigMode config)
 			{
-#if UNITY_WEBPLAYER
-			return null;
-#else
-
 			string targetFilename = Path.Combine(Application.dataPath, relFilename);
 			
 			if (!File.Exists(targetFilename))
@@ -480,7 +470,6 @@ public class ScriptBackup : EditorWindow
 			file.enabled 	= true;
 	
 			return file;
-#endif
 			}
 
 
@@ -606,7 +595,6 @@ public class ScriptBackup : EditorWindow
 		public void CollectBackupFolders()	
 			{
 			this.backupFolders.Clear();
-#if !UNITY_WEBPLAYER
 	
 			DirectoryInfo backupDir = new DirectoryInfo(GetBackupFolder());
 			if (!backupDir.Exists)
@@ -622,7 +610,6 @@ public class ScriptBackup : EditorWindow
 				}
 	
 			this.backupFolders.Sort(BackupFolder.Cmp);
-#endif
 			}
 		
 		
@@ -725,32 +712,24 @@ public class ScriptBackup : EditorWindow
 			// -------------------
 			public void ViewLog()
 				{
-#if !UNITY_WEBPLAYER
-
 				string logPath = Path.Combine(this.path, CONVERSION_LOG_FILENAME);
 				System.Diagnostics.Process.Start(logPath);
-#endif
 				}
 
 			// -----------------
 			public void ViewFolder()
 				{
-#if !UNITY_WEBPLAYER
-
 				System.Diagnostics.Process.Start(this.path);				
-#endif
 				}
 
 			// ------------------
 			public void DeleteFolder()	
 				{
-#if !UNITY_WEBPLAYER
-
 				try 
 					{ Directory.Delete(this.path, true); }
 				catch (System.Exception e)
 					{ EditorUtility.DisplayDialog(ScriptBackup.DIALOG_TITLE, "Could not delete backup folder ["  + this.name + "]!\n" + e.Message, "OK"); }
-#endif					
+					
 				}
 			}
 		}		

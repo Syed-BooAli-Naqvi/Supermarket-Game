@@ -14,6 +14,14 @@ TagManager:
   - Note5
   - Note10
   - note20
+  - Ignore Ragdoll
+  - PlayerUI
+  - LookAt
+  - Weapon
+  - AutoCrouch
+  - Action
+  - LadderTrigger
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -28,8 +36,8 @@ TagManager:
   - RCC_DetachablePart
   - RCC_Trailer
   - RCC_Crasher
-  - 
-  - 
+  - Real Character
+  - Player
   - 
   - 
   - 

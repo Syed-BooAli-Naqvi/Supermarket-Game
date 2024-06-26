@@ -1,65 +1,17 @@
 -------------------------------------------
-Control Freak 2 (2.8.10)
-Copyright (C) 2013-2023 Dan's Game Tools
+Control Freak 2 (2.2.8.3)
+Copyright (C) 2013-2020 Dan's Game Tools
 http://DansGameTools.blogspot.com
 -------------------------------------------
 
 Online documentation:
 
-https://dansgametools.blogspot.com/p/docs.html
+http://ControlFreakDocs.000webhostapp.com/
 
 
 
-Warning:
+Change Log:
 
-For some unknown reasons, touch controls may not show up when playing on devices with certain mobile GPUs.
-When this happens, please check if your rig is using UI Images with custom materials. Removing these materials fixes the issue.
-You can do this automatically by right-clicking on InputRig's component title and picking the dedicated command.
-
-
-Version 2.8.10
-
-	Fixed Script Converter's "parameter bug".
-	Fixed Camera-Space and World-space canvas mode support.
-
-
-Version 2.8.9
-
-	Fixed the Cinemachine Add-on problem.
-	Updated Opsive integration package info.
-	Updated MacOS gamepad profile bank.
-
-
-Version 2.8.8
-
-	Added Assembly Definition file.
-	Script Converter will now detect and select affected Assembly Definition Files after conversion.
-	Fixed 'affected keys' bug.
-	Fixed gamepad detection's false positives.
-
-Version 2.8.7
-
-	Added tools to select or remove custom materials from rig's UI images (InputRig context commands).
-	Updated UFE 2.4+ add-on.
-
-Version 2.8.6
-
-	Fixed UFE 2.4+ support.
-
-
-Version 2.8.5
-
-	Added Cinemachine Add-on.
-	Fixed CanvasRenderer bug on newer Unity versions.
-	Added Mouse emulation Input Rig prefabs.
-
-
-Version 2.2.8.4
-
-	Improved Unity comapatibility.
-	Fixed bug in the Script Converter causing some rare false-positives.
-	Fixed PS4 Controller compatibility.
-	
 
 Version 2.2.8.3
 

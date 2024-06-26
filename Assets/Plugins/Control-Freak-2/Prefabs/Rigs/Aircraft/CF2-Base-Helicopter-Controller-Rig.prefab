@@ -2,16 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &114080
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
   m_Component:
-  - component: {fileID: 22454888}
-  - component: {fileID: 22239416}
-  - component: {fileID: 11441422}
-  - component: {fileID: 11467476}
+  - 224: {fileID: 22454888}
+  - 222: {fileID: 22239416}
+  - 114: {fileID: 11441422}
+  - 114: {fileID: 11467476}
   m_Layer: 0
   m_Name: Turn-Joystick-Hat
   m_TagString: Untagged
@@ -19,255 +18,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &22454888
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22468274}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.125, y: 0.125}
-  m_AnchorMax: {x: 0.875, y: 0.875}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22239416
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114080}
-  m_CullTransparentMesh: 0
---- !u!114 &11441422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &11467476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 11459398}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteMode: 0
-  spriteNeutralPressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUp:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDown:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  animateTransl: 1
-  moveScale: {x: 0.5, y: 0.5}
-  translationSmoothingTime: 0.1
-  rotationMode: 0
-  simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
 --- !u!1 &116014
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
   m_Component:
-  - component: {fileID: 22487554}
-  - component: {fileID: 22207408}
-  - component: {fileID: 11406014}
-  - component: {fileID: 11470288}
+  - 224: {fileID: 22487554}
+  - 222: {fileID: 22207408}
+  - 114: {fileID: 11406014}
+  - 114: {fileID: 11470288}
   m_Layer: 0
   m_Name: Turn-Joystick-Base
   m_TagString: Untagged
@@ -275,52 +36,351 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &22487554
-RectTransform:
+--- !u!1 &130734
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22493716}
+  - 114: {fileID: 11431994}
+  m_Layer: 0
+  m_Name: Joystick-Tilt-Region
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &134112
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22449912}
+  - 222: {fileID: 22220692}
+  - 114: {fileID: 11497928}
+  - 114: {fileID: 11414020}
+  m_Layer: 0
+  m_Name: Joystick-Tilt-Hat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &143998
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22468274}
+  - 114: {fileID: 11459398}
+  m_Layer: 0
+  m_Name: Turn-Joystick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &144200
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22451668}
+  - 114: {fileID: 11424528}
+  m_Layer: 0
+  m_Name: Lift-Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &144980
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22452322}
+  - 114: {fileID: 11428656}
+  m_Layer: 0
+  m_Name: Turn-Joystick-Region
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &148352
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22444892}
+  - 114: {fileID: 11433104}
+  m_Layer: 0
+  m_Name: Descend-Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &150050
+GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116014}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 488070}
+  - 114: {fileID: 11448746}
+  m_Layer: 0
+  m_Name: CF2-Base-Helicopter-Controller-Rig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &153940
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22447064}
+  - 222: {fileID: 22294796}
+  - 114: {fileID: 11448960}
+  - 114: {fileID: 11494916}
+  m_Layer: 0
+  m_Name: Descend-Button-Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &156890
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22453462}
+  - 222: {fileID: 22243050}
+  - 114: {fileID: 11419070}
+  - 114: {fileID: 11429486}
+  m_Layer: 0
+  m_Name: Joystick-Tilt-Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &167806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22467250}
+  - 223: {fileID: 22301288}
+  - 114: {fileID: 11435548}
+  - 114: {fileID: 11401520}
+  m_Layer: 0
+  m_Name: CF2-Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &171550
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22436162}
+  - 114: {fileID: 11466630}
+  - 222: {fileID: 22291400}
+  - 114: {fileID: 11449952}
+  m_Layer: 0
+  m_Name: CF2-Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &185792
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22493546}
+  - 114: {fileID: 11440788}
+  m_Layer: 0
+  m_Name: Joystick-Tilt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &195172
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22445472}
+  - 222: {fileID: 22208050}
+  - 114: {fileID: 11443372}
+  - 114: {fileID: 11404518}
+  m_Layer: 0
+  m_Name: Lift-Button-Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488070
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22468274}
+  m_Children:
+  - {fileID: 22467250}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22207408
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116014}
-  m_CullTransparentMesh: 0
+--- !u!114 &11401520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &11404518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 11424528}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: c7ef5652a10024040ba9054754d3acbd, type: 3}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spritePressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.25
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggled:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.10000002
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteToggledAndPressed:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.29999995
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
 --- !u!114 &11406014
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -329,334 +389,11 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &11470288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 11459398}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteMode: 0
-  spriteNeutralPressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUp:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDown:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  animateTransl: 0
-  moveScale: {x: 0, y: 0}
-  translationSmoothingTime: 0.1
-  rotationMode: 0
-  simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
---- !u!1 &130734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22493716}
-  - component: {fileID: 11431994}
-  m_Layer: 0
-  m_Name: Joystick-Tilt-Region
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22493716
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22493546}
-  m_Father: {fileID: 22436162}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &11431994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371d284a20ca80145bc6ca05d372bb96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreFingerRadius: 1
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 0
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
---- !u!1 &134112
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22449912}
-  - component: {fileID: 22220692}
-  - component: {fileID: 11497928}
-  - component: {fileID: 11414020}
-  m_Layer: 0
-  m_Name: Joystick-Tilt-Hat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22449912
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22493546}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.125, y: 0.125}
-  m_AnchorMax: {x: 0.875, y: 0.875}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22220692
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134112}
-  m_CullTransparentMesh: 0
---- !u!114 &11497928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &11414020
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134112}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -668,15 +405,15 @@ MonoBehaviour:
   spriteNeutral:
     enabled: 1
     sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
     scale: 1
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -686,14 +423,14 @@ MonoBehaviour:
     enabled: 1
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -702,14 +439,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -718,14 +455,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -734,14 +471,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -750,14 +487,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -766,14 +503,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -782,14 +519,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -798,14 +535,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -814,267 +551,56 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
+    scale: 1.20000005
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
     offsetTransitionFactor: 1
   animateTransl: 1
-  moveScale: {x: 0.5, y: 0.5}
-  translationSmoothingTime: 0.1
+  moveScale: {x: .5, y: .5}
+  translationSmoothingTime: .100000001
   rotationMode: 0
   simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
---- !u!1 &143998
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22468274}
-  - component: {fileID: 11459398}
-  m_Layer: 0
-  m_Name: Turn-Joystick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22468274
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22487554}
-  - {fileID: 22454888}
-  m_Father: {fileID: 22452322}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &11459398
+  rotationSmoothingTime: .00999999978
+--- !u!114 &11419070
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143998}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294a8c1378026744583a542cf9af0572, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreFingerRadius: 0
-  cantBeControlledDirectly: 0
-  shareTouch: 0
-  dontAcceptSharedTouches: 0
-  canBeSwipedOver: 0
-  restictSwipeOverTargets: 0
-  swipeOverOthersMode: 2
-  swipeOffMode: 2
-  swipeOverTargetList: []
-  shape: 2
-  disablingConditions:
-    mobileModeRelation: 0
-    disableWhenTouchScreenInactive: 1
-    disableWhenCursorIsUnlocked: 0
-    switchList: []
-  fadeOutWhenReleased: 1
-  startFadedOut: 1
-  fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
-  centerOnDirectTouch: 1
-  centerOnIndirectTouch: 1
-  centerWhenFollowing: 0
-  stickyMode: 1
-  clampInsideRegion: 1
-  clampInsideCanvas: 1
-  returnToStartingPosition: 0
-  directInitialVector: {x: 0, y: 0}
-  indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.5
-  originSmoothTime: 0.5
-  targetDynamicRegion: {fileID: 11428656}
-  config:
-    analogDeadZone: 0.1
-    analogEndZone: 1
-    analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
-    useRamp: 0
-    ramp:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    clampMode: 1
-    perAxisDeadzones: 0
-    stickMode: 1
-    originalDirResetMode: 0
-    angularMagnet: 0.5
-    digitalDetectionMode: 0
-    blockX: 0
-    blockY: 1
-  pressBinding:
-    enabled: 0
-    axisList: []
-    keyList: 
-  joyStateBinding:
-    enabled: 1
-    horzAxisBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Heli-Turn
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
-    vertAxisBinding:
-      enabled: 0
-      targetList: []
-    dirBinding:
-      enabled: 1
-      bindDiagonals: 0
-      bindMode: 0
-      dirBindingU:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingUR:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingR:
-        enabled: 1
-        axisList: []
-        keyList: 65000000
-      dirBindingDR:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingD:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingDL:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingL:
-        enabled: 1
-        axisList: []
-        keyList: 71000000
-      dirBindingUL:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingN:
-        enabled: 0
-        axisList: []
-        keyList: 
-      dirBindingAny:
-        enabled: 0
-        axisList: []
-        keyList: 
-  emulateTouchPressure: 1
-  touchPressureBinding:
-    enabled: 0
-    targetList: []
---- !u!1 &144200
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22451668}
-  - component: {fileID: 11424528}
-  m_Layer: 0
-  m_Name: Lift-Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22451668
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22445472}
-  m_Father: {fileID: 22436162}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -61.9, y: 146.3}
-  m_SizeDelta: {x: 72, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11424528
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144200}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1099,9 +625,9 @@ MonoBehaviour:
   fadeOutWhenReleased: 1
   startFadedOut: 1
   fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
+  fadeInDuration: .200000003
+  fadeOutDelay: .5
+  fadeOutDuration: .5
   centerOnDirectTouch: 1
   centerOnIndirectTouch: 1
   centerWhenFollowing: 1
@@ -1111,8 +637,8 @@ MonoBehaviour:
   returnToStartingPosition: 0
   directInitialVector: {x: 0, y: 0}
   indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.5
-  originSmoothTime: 0.5
+  touchSmoothing: .5
+  originSmoothTime: .5
   targetDynamicRegion: {fileID: 0}
   toggle: 0
   toggleOnAction: 0
@@ -1134,49 +660,11 @@ MonoBehaviour:
   touchPressureBinding:
     enabled: 0
     targetList: []
---- !u!1 &144980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22452322}
-  - component: {fileID: 11428656}
-  m_Layer: 0
-  m_Name: Turn-Joystick-Region
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22452322
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22468274}
-  m_Father: {fileID: 22436162}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11428656
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144980}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1198,49 +686,217 @@ MonoBehaviour:
     disableWhenTouchScreenInactive: 1
     disableWhenCursorIsUnlocked: 0
     switchList: []
---- !u!1 &148352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22444892}
-  - component: {fileID: 11433104}
-  m_Layer: 0
-  m_Name: Descend-Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22444892
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22447064}
-  m_Father: {fileID: 22436162}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -58.5, y: 55.3}
-  m_SizeDelta: {x: 72, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &11429486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 11440788}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteMode: 0
+  spriteNeutralPressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUp:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDown:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  animateTransl: 0
+  moveScale: {x: 0, y: 0}
+  translationSmoothingTime: .100000001
+  rotationMode: 0
+  simpleRotationRange: 45
+  rotationSmoothingTime: .00999999978
+--- !u!114 &11431994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371d284a20ca80145bc6ca05d372bb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 1
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 0
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
 --- !u!114 &11433104
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148352}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1265,9 +921,9 @@ MonoBehaviour:
   fadeOutWhenReleased: 1
   startFadedOut: 1
   fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
+  fadeInDuration: .200000003
+  fadeOutDelay: .5
+  fadeOutDuration: .5
   centerOnDirectTouch: 1
   centerOnIndirectTouch: 1
   centerWhenFollowing: 1
@@ -1277,8 +933,8 @@ MonoBehaviour:
   returnToStartingPosition: 0
   directInitialVector: {x: 0, y: 0}
   indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.5
-  originSmoothTime: 0.5
+  touchSmoothing: .5
+  originSmoothTime: .5
   targetDynamicRegion: {fileID: 0}
   toggle: 0
   toggleOnAction: 0
@@ -1300,44 +956,242 @@ MonoBehaviour:
   touchPressureBinding:
     enabled: 0
     targetList: []
---- !u!1 &150050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 488070}
-  - component: {fileID: 11448746}
-  m_Layer: 0
-  m_Name: CF2-Base-Helicopter-Controller-Rig
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &488070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22467250}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11435548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 480}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &11440788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294a8c1378026744583a542cf9af0572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreFingerRadius: 0
+  cantBeControlledDirectly: 0
+  shareTouch: 0
+  dontAcceptSharedTouches: 0
+  canBeSwipedOver: 0
+  restictSwipeOverTargets: 0
+  swipeOverOthersMode: 2
+  swipeOffMode: 2
+  swipeOverTargetList: []
+  shape: 2
+  disablingConditions:
+    mobileModeRelation: 0
+    disableWhenTouchScreenInactive: 1
+    disableWhenCursorIsUnlocked: 0
+    switchList: []
+  fadeOutWhenReleased: 0
+  startFadedOut: 1
+  fadeOutTargetAlpha: 0
+  fadeInDuration: .200000003
+  fadeOutDelay: .5
+  fadeOutDuration: .5
+  centerOnDirectTouch: 1
+  centerOnIndirectTouch: 1
+  centerWhenFollowing: 0
+  stickyMode: 1
+  clampInsideRegion: 1
+  clampInsideCanvas: 1
+  returnToStartingPosition: 0
+  directInitialVector: {x: 0, y: 0}
+  indirectInitialVector: {x: 0, y: 0}
+  touchSmoothing: .5
+  originSmoothTime: .5
+  targetDynamicRegion: {fileID: 11431994}
+  config:
+    analogDeadZone: .100000001
+    analogEndZone: 1
+    analogRangeStartValue: 0
+    digitalEnterThresh: .600000024
+    digitalLeaveThresh: .300000012
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
+    useRamp: 0
+    ramp:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: .5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    clampMode: 1
+    perAxisDeadzones: 1
+    stickMode: 2
+    originalDirResetMode: 0
+    angularMagnet: .5
+    digitalDetectionMode: 0
+    blockX: 0
+    blockY: 0
+  pressBinding:
+    enabled: 0
+    axisList: []
+    keyList: 
+  joyStateBinding:
+    enabled: 1
+    horzAxisBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Horizontal
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    vertAxisBinding:
+      enabled: 1
+      targetList:
+      - separateAxes: 0
+        singleAxis: Vertical
+        reverseSingleAxis: 0
+        positiveAxis: 
+        negativeAxis: 
+        positiveAxisAsPositive: 1
+        negativeAxisAsPositive: 1
+    dirBinding:
+      enabled: 1
+      bindDiagonals: 0
+      bindMode: 0
+      dirBindingU:
+        enabled: 1
+        axisList: []
+        keyList: 77000000
+      dirBindingUR:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingR:
+        enabled: 1
+        axisList: []
+        keyList: 64000000
+      dirBindingDR:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingD:
+        enabled: 1
+        axisList: []
+        keyList: 73000000
+      dirBindingDL:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingL:
+        enabled: 1
+        axisList: []
+        keyList: 61000000
+      dirBindingUL:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingN:
+        enabled: 0
+        axisList: []
+        keyList: 
+      dirBindingAny:
+        enabled: 0
+        axisList: []
+        keyList: 
+  emulateTouchPressure: 1
+  touchPressureBinding:
+    enabled: 0
+    targetList: []
+  dbGizmosSize: 1.10000002
+--- !u!114 &11441422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &11443372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c7ef5652a10024040ba9054754d3acbd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11448746
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150050}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1352,13 +1206,13 @@ MonoBehaviour:
   hideWhenTouchScreenIsUnusedDelay: 10
   hideWhenGamepadIsActivated: 1
   hideWhenGamepadIsActivatedDelay: 5
-  fingerRadiusInCm: 0.25
-  swipeOverFromNothing: 0
-  controlBaseAlphaAnimDuration: 0.5
-  animatorMaxAnimDuration: 0.2
+  fingerRadiusInCm: .25
+  swipeOverFromNothing: 1
+  controlBaseAlphaAnimDuration: .5
+  animatorMaxAnimDuration: .200000003
   ninetyDegTurnMouseDelta: 500
   ninetyDegTurnTouchSwipeInCm: 4
-  ninetyDegTurnAnalogDuration: 0.75
+  ninetyDegTurnAnalogDuration: .75
   virtualScreenDiameterInches: 4
   scrollStepsPerNinetyDegTurn: 10
   joysticks:
@@ -1381,17 +1235,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 97
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
-      digitalToAnalogAccelTime: 0.33333334
-      digitalToAnalogDecelTime: 0.33333334
+      digitalToAnalogAccelTime: .333333343
+      digitalToAnalogDecelTime: .333333343
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Vertical
       axisType: 1
       deltaMode: 1
@@ -1408,22 +1262,22 @@ MonoBehaviour:
       keyboardNegativeAlt0: 115
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
-      digitalToAnalogAccelTime: 0.33333334
-      digitalToAnalogDecelTime: 0.33333334
+      digitalToAnalogAccelTime: .333333343
+      digitalToAnalogDecelTime: .333333343
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Mouse X
       axisType: 4
       deltaMode: 1
       snap: 0
-      scale: 0.1
+      scale: .100000001
       affectSourceKeys: 1
       affectedKeyPositive: 0
       affectedKeyNegative: 0
@@ -1435,22 +1289,22 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Mouse Y
       axisType: 4
       deltaMode: 1
       snap: 0
-      scale: 0.1
+      scale: .100000001
       affectSourceKeys: 1
       affectedKeyPositive: 0
       affectedKeyNegative: 0
@@ -1462,17 +1316,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Mouse ScrollWheel
       axisType: 3
       deltaMode: 1
@@ -1489,17 +1343,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Mouse ScrollWheel Secondary
       axisType: 3
       deltaMode: 1
@@ -1516,17 +1370,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
-      digitalToAnalogAccelTime: 0.25
-      digitalToAnalogDecelTime: 0.25
+      digitalToAnalogAccelTime: .25
+      digitalToAnalogDecelTime: .25
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Fire1
       axisType: 2
       deltaMode: 1
@@ -1543,17 +1397,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Fire2
       axisType: 2
       deltaMode: 1
@@ -1570,17 +1424,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Jump
       axisType: 2
       deltaMode: 1
@@ -1597,17 +1451,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Fire3
       axisType: 2
       deltaMode: 1
@@ -1624,17 +1478,17 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
       digitalToAnalogAccelTime: 0
       digitalToAnalogDecelTime: 0
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
     - name: Heli-Turn
       axisType: 1
       deltaMode: 1
@@ -1651,60 +1505,47 @@ MonoBehaviour:
       keyboardNegativeAlt0: 0
       keyboardNegativeAlt1: 0
       keyboardNegativeAlt2: 0
-      analogToDigitalThresh: 0.125
+      analogToDigitalThresh: .125
       rawSmoothingTime: 0
       smoothingTime: 0
-      digitalToAnalogAccelTime: 0.25
-      digitalToAnalogDecelTime: 0.25
+      digitalToAnalogAccelTime: .25
+      digitalToAnalogDecelTime: .25
       digitalToScrollAutoRepeat: 1
-      digitalToScrollRepeatInterval: 0.5
+      digitalToScrollRepeatInterval: .5
       digitalToScrollDelay: 1
-      scrollToAnalogSmoothingTime: 0.05
-      scrollToAnalogStepDuration: 0.1
-      scrollToDeltaSmoothingTime: 0.1
+      scrollToAnalogSmoothingTime: .0500000007
+      scrollToAnalogStepDuration: .100000001
+      scrollToDeltaSmoothingTime: .100000001
   keyboardBlockedCodes: 
   dpadConfig:
-    analogDeadZone: 0.3
+    analogDeadZone: .300000012
     analogEndZone: 1
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .600000024
+    digitalLeaveThresh: .300000012
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
     clampMode: 1
     perAxisDeadzones: 0
     stickMode: 2
@@ -1714,189 +1555,137 @@ MonoBehaviour:
     blockX: 0
     blockY: 0
   leftStickConfig:
-    analogDeadZone: 0.3
-    analogEndZone: 0.7
+    analogDeadZone: .300000012
+    analogEndZone: .699999988
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .600000024
+    digitalLeaveThresh: .300000012
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
     clampMode: 1
     perAxisDeadzones: 0
     stickMode: 0
     originalDirResetMode: 0
-    angularMagnet: 0.5
+    angularMagnet: .5
     digitalDetectionMode: 1
     blockX: 0
     blockY: 0
   rightStickConfig:
-    analogDeadZone: 0.3
-    analogEndZone: 0.7
+    analogDeadZone: .300000012
+    analogEndZone: .699999988
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .600000024
+    digitalLeaveThresh: .300000012
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
     clampMode: 1
     perAxisDeadzones: 0
     stickMode: 0
     originalDirResetMode: 0
-    angularMagnet: 0.5
+    angularMagnet: .5
     digitalDetectionMode: 1
     blockX: 0
     blockY: 0
   leftTriggerAnalogConfig:
-    analogDeadZone: 0.2
+    analogDeadZone: .200000003
     analogEndZone: 1
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.5
-    digitalLeaveThresh: 0.2
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .5
+    digitalLeaveThresh: .200000003
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
   rightTriggerAnalogConfig:
-    analogDeadZone: 0.2
+    analogDeadZone: .200000003
     analogEndZone: 1
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.5
-    digitalLeaveThresh: 0.2
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .5
+    digitalLeaveThresh: .200000003
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
   gamepads:
   - enabled: 0
     digiFaceDownBinding:
@@ -2967,89 +2756,63 @@ MonoBehaviour:
       disableWhenCursorIsUnlocked: 0
       switchList: []
     rollAnalogConfig:
-      analogDeadZone: 0.3
+      analogDeadZone: .300000012
       analogEndZone: 1
       analogRangeStartValue: 0
-      digitalEnterThresh: 0.5
-      digitalLeaveThresh: 0.2
-      digitalToAnalogPressSpeed: 0.5
-      digitalToAnalogReleaseSpeed: 0.5
+      digitalEnterThresh: .5
+      digitalLeaveThresh: .200000003
+      digitalToAnalogPressSpeed: .5
+      digitalToAnalogReleaseSpeed: .5
       useRamp: 0
       ramp:
         serializedVersion: 2
         m_Curve:
-        - serializedVersion: 3
-          time: 0
+        - time: 0
           value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.5
-          value: 0.5
+        - time: .5
+          value: .5
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
+        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
     pitchAnalogConfig:
-      analogDeadZone: 0.3
+      analogDeadZone: .300000012
       analogEndZone: 1
       analogRangeStartValue: 0
-      digitalEnterThresh: 0.5
-      digitalLeaveThresh: 0.2
-      digitalToAnalogPressSpeed: 0.5
-      digitalToAnalogReleaseSpeed: 0.5
+      digitalEnterThresh: .5
+      digitalLeaveThresh: .200000003
+      digitalToAnalogPressSpeed: .5
+      digitalToAnalogReleaseSpeed: .5
       useRamp: 0
       ramp:
         serializedVersion: 2
         m_Curve:
-        - serializedVersion: 3
-          time: 0
+        - time: 0
           value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.5
-          value: 0.5
+        - time: .5
+          value: .5
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
+        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
     rollBinding:
       enabled: 0
       targetList:
@@ -3148,71 +2911,25 @@ MonoBehaviour:
         enabled: 0
         axisList: []
         keyList: 
---- !u!1 &153940
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22447064}
-  - component: {fileID: 22294796}
-  - component: {fileID: 11448960}
-  - component: {fileID: 11494916}
-  m_Layer: 0
-  m_Name: Descend-Button-Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22447064
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22444892}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22294796
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153940}
-  m_CullTransparentMesh: 0
 --- !u!114 &11448960
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: e701a432ede3e134e9a7bf6b5f075f9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -3221,511 +2938,11 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &11494916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 11433104}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: e701a432ede3e134e9a7bf6b5f075f9d, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spritePressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.25
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteToggled:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteToggledAndPressed:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.3
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
---- !u!1 &156890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22453462}
-  - component: {fileID: 22243050}
-  - component: {fileID: 11419070}
-  - component: {fileID: 11429486}
-  m_Layer: 0
-  m_Name: Joystick-Tilt-Base
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22453462
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22493546}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22243050
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156890}
-  m_CullTransparentMesh: 0
---- !u!114 &11419070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &11429486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToSource: 1
-  sourceControl: {fileID: 11440788}
-  spriteNeutral:
-    enabled: 1
-    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
-    scale: 1
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteMode: 0
-  spriteNeutralPressed:
-    enabled: 1
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUp:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownRight:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDown:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteDownLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  spriteUpLeft:
-    enabled: 0
-    sprite: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.2
-    rotation: 0
-    offset: {x: 0, y: 0}
-    resetOffset: 0
-    resetRotation: 0
-    resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
-    colorTransitionFactor: 1
-    scaleTransitionFactor: 1
-    rotationTransitionFactor: 1
-    offsetTransitionFactor: 1
-  animateTransl: 0
-  moveScale: {x: 0, y: 0}
-  translationSmoothingTime: 0.1
-  rotationMode: 0
-  simpleRotationRange: 45
-  rotationSmoothingTime: 0.01
---- !u!1 &167806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22467250}
-  - component: {fileID: 22301288}
-  - component: {fileID: 11435548}
-  - component: {fileID: 11401520}
-  m_Layer: 0
-  m_Name: CF2-Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22467250
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 22436162}
-  m_Father: {fileID: 488070}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!223 &22301288
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167806}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 1
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: -1
-  m_TargetDisplay: 0
---- !u!114 &11435548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 480}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!114 &11401520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!1 &171550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22436162}
-  - component: {fileID: 11466630}
-  - component: {fileID: 22291400}
-  - component: {fileID: 11449952}
-  m_Layer: 0
-  m_Name: CF2-Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22436162
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22493716}
-  - {fileID: 22444892}
-  - {fileID: 22451668}
-  - {fileID: 22452322}
-  m_Father: {fileID: 22467250}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &11466630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81705b1c486dc3b468f7cc553a648228, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConnectToRig: 1
-  rig: {fileID: 11448746}
---- !u!222 &22291400
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171550}
-  m_CullTransparentMesh: 0
 --- !u!114 &11449952
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171550}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3735,51 +2952,12 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
---- !u!1 &185792
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22493546}
-  - component: {fileID: 11440788}
-  m_Layer: 0
-  m_Name: Joystick-Tilt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22493546
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22453462}
-  - {fileID: 22449912}
-  m_Father: {fileID: 22493716}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &11440788
+--- !u!114 &11459398
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185792}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143998}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 294a8c1378026744583a542cf9af0572, type: 3}
@@ -3800,12 +2978,12 @@ MonoBehaviour:
     disableWhenTouchScreenInactive: 1
     disableWhenCursorIsUnlocked: 0
     switchList: []
-  fadeOutWhenReleased: 0
+  fadeOutWhenReleased: 1
   startFadedOut: 1
   fadeOutTargetAlpha: 0
-  fadeInDuration: 0.2
-  fadeOutDelay: 0.5
-  fadeOutDuration: 0.5
+  fadeInDuration: .200000003
+  fadeOutDelay: .5
+  fadeOutDuration: .5
   centerOnDirectTouch: 1
   centerOnIndirectTouch: 1
   centerWhenFollowing: 0
@@ -3815,59 +2993,46 @@ MonoBehaviour:
   returnToStartingPosition: 0
   directInitialVector: {x: 0, y: 0}
   indirectInitialVector: {x: 0, y: 0}
-  touchSmoothing: 0.5
-  originSmoothTime: 0.5
-  targetDynamicRegion: {fileID: 11431994}
+  touchSmoothing: .5
+  originSmoothTime: .5
+  targetDynamicRegion: {fileID: 11428656}
   config:
-    analogDeadZone: 0.1
+    analogDeadZone: .100000001
     analogEndZone: 1
     analogRangeStartValue: 0
-    digitalEnterThresh: 0.6
-    digitalLeaveThresh: 0.3
-    digitalToAnalogPressSpeed: 0.5
-    digitalToAnalogReleaseSpeed: 0.5
+    digitalEnterThresh: .600000024
+    digitalLeaveThresh: .300000012
+    digitalToAnalogPressSpeed: .5
+    digitalToAnalogReleaseSpeed: .5
     useRamp: 0
     ramp:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.5
+      - time: .5
+        value: .5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
     clampMode: 1
-    perAxisDeadzones: 1
-    stickMode: 2
+    perAxisDeadzones: 0
+    stickMode: 1
     originalDirResetMode: 0
-    angularMagnet: 0.5
+    angularMagnet: .5
     digitalDetectionMode: 0
     blockX: 0
-    blockY: 0
+    blockY: 1
   pressBinding:
     enabled: 0
     axisList: []
@@ -3878,30 +3043,23 @@ MonoBehaviour:
       enabled: 1
       targetList:
       - separateAxes: 0
-        singleAxis: Horizontal
+        singleAxis: Heli-Turn
         reverseSingleAxis: 0
         positiveAxis: 
         negativeAxis: 
         positiveAxisAsPositive: 1
         negativeAxisAsPositive: 1
     vertAxisBinding:
-      enabled: 1
-      targetList:
-      - separateAxes: 0
-        singleAxis: Vertical
-        reverseSingleAxis: 0
-        positiveAxis: 
-        negativeAxis: 
-        positiveAxisAsPositive: 1
-        negativeAxisAsPositive: 1
+      enabled: 0
+      targetList: []
     dirBinding:
       enabled: 1
       bindDiagonals: 0
       bindMode: 0
       dirBindingU:
-        enabled: 1
+        enabled: 0
         axisList: []
-        keyList: 77000000
+        keyList: 
       dirBindingUR:
         enabled: 0
         axisList: []
@@ -3909,15 +3067,15 @@ MonoBehaviour:
       dirBindingR:
         enabled: 1
         axisList: []
-        keyList: 64000000
+        keyList: 65000000
       dirBindingDR:
         enabled: 0
         axisList: []
         keyList: 
       dirBindingD:
-        enabled: 1
+        enabled: 0
         axisList: []
-        keyList: 73000000
+        keyList: 
       dirBindingDL:
         enabled: 0
         axisList: []
@@ -3925,7 +3083,7 @@ MonoBehaviour:
       dirBindingL:
         enabled: 1
         axisList: []
-        keyList: 61000000
+        keyList: 71000000
       dirBindingUL:
         enabled: 0
         axisList: []
@@ -3942,107 +3100,405 @@ MonoBehaviour:
   touchPressureBinding:
     enabled: 0
     targetList: []
---- !u!1 &195172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22445472}
-  - component: {fileID: 22208050}
-  - component: {fileID: 11443372}
-  - component: {fileID: 11404518}
-  m_Layer: 0
-  m_Name: Lift-Button-Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &22445472
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22451668}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &22208050
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195172}
-  m_CullTransparentMesh: 0
---- !u!114 &11443372
+  dbGizmosSize: 1.10000002
+--- !u!114 &11466630
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195172}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 81705b1c486dc3b468f7cc553a648228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7ef5652a10024040ba9054754d3acbd, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &11404518
+  autoConnectToRig: 1
+  rig: {fileID: 11448746}
+--- !u!114 &11467476
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195172}
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoConnectToSource: 1
-  sourceControl: {fileID: 11424528}
+  sourceControl: {fileID: 11459398}
   spriteNeutral:
     enabled: 1
-    sprite: {fileID: 21300000, guid: c7ef5652a10024040ba9054754d3acbd, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 0.33}
+    sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
     scale: 1
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteMode: 0
+  spriteNeutralPressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUp:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDown:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  animateTransl: 1
+  moveScale: {x: .5, y: .5}
+  translationSmoothingTime: .100000001
+  rotationMode: 0
+  simpleRotationRange: 45
+  rotationSmoothingTime: .00999999978
+--- !u!114 &11470288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b157099fa5ec75144808407db47c6a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 11459398}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 51ce1a70ac4238c48aaddd05f6604e75, type: 3}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteMode: 0
+  spriteNeutralPressed:
+    enabled: 1
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUp:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownRight:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDown:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteDownLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  spriteUpLeft:
+    enabled: 0
+    sprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    scale: 1.20000005
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
+    colorTransitionFactor: 1
+    scaleTransitionFactor: 1
+    rotationTransitionFactor: 1
+    offsetTransitionFactor: 1
+  animateTransl: 0
+  moveScale: {x: 0, y: 0}
+  translationSmoothingTime: .100000001
+  rotationMode: 0
+  simpleRotationRange: 45
+  rotationSmoothingTime: .00999999978
+--- !u!114 &11494916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058d21773499e78468e8aa6a47f82959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToSource: 1
+  sourceControl: {fileID: 11433104}
+  spriteNeutral:
+    enabled: 1
+    sprite: {fileID: 21300000, guid: e701a432ede3e134e9a7bf6b5f075f9d, type: 3}
+    color: {r: 1, g: 1, b: 1, a: .330000013}
+    scale: 1
+    rotation: 0
+    offset: {x: 0, y: 0}
+    resetOffset: 0
+    resetRotation: 0
+    resetScale: 0
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -4057,8 +3513,8 @@ MonoBehaviour:
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -4067,14 +3523,14 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.1
+    scale: 1.10000002
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
@@ -4083,15 +3539,363 @@ MonoBehaviour:
     enabled: 0
     sprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    scale: 1.3
+    scale: 1.29999995
     rotation: 0
     offset: {x: 0, y: 0}
     resetOffset: 0
     resetRotation: 0
     resetScale: 0
-    duration: 0.1
-    baseTransitionTime: 0.1
+    duration: .100000001
+    baseTransitionTime: .100000001
     colorTransitionFactor: 1
     scaleTransitionFactor: 1
     rotationTransitionFactor: 1
     offsetTransitionFactor: 1
+--- !u!114 &11497928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .330000013}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fcdcf0258794fb44298ee36183440e49, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &22207408
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116014}
+--- !u!222 &22208050
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195172}
+--- !u!222 &22220692
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134112}
+--- !u!222 &22239416
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114080}
+--- !u!222 &22243050
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156890}
+--- !u!222 &22291400
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171550}
+--- !u!222 &22294796
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153940}
+--- !u!223 &22301288
+Canvas:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167806}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: -1
+--- !u!224 &22436162
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22493716}
+  - {fileID: 22444892}
+  - {fileID: 22451668}
+  - {fileID: 22452322}
+  m_Father: {fileID: 22467250}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22444892
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22447064}
+  m_Father: {fileID: 22436162}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -58.5, y: 55.2999992}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22445472
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22451668}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22447064
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22444892}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22449912
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22493546}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .125, y: .125}
+  m_AnchorMax: {x: .875, y: .875}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22451668
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22445472}
+  m_Father: {fileID: 22436162}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -61.9000015, y: 146.300003}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22452322
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22468274}
+  m_Father: {fileID: 22436162}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22453462
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22493546}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22454888
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22468274}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .125, y: .125}
+  m_AnchorMax: {x: .875, y: .875}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22467250
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 22436162}
+  m_Father: {fileID: 488070}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!224 &22468274
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22487554}
+  - {fileID: 22454888}
+  m_Father: {fileID: 22452322}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 72, y: 72}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22487554
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22468274}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22493546
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22453462}
+  - {fileID: 22449912}
+  m_Father: {fileID: 22493716}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22493716
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22493546}
+  m_Father: {fileID: 22436162}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 150050}
+  m_IsPrefabParent: 1

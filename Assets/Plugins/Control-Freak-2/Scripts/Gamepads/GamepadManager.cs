@@ -1,6 +1,6 @@
 // -------------------------------------------
 // Control Freak 2
-// Copyright (C) 2013-2021 Dan's Game Tools
+// Copyright (C) 2013-2020 Dan's Game Tools
 // http://DansGameTools.blogspot.com
 // -------------------------------------------
 
@@ -98,27 +98,6 @@ public class GamepadManager : ControlFreak2.Internal.ComponentBase
 		
 
 //! \cond
-
-	// -------------------
-	static public bool IsDeviceIgnored(string deviceName)
-		{
-		for (int i = 0; i < ignoredDeviceNames.Length; ++i)
-			{
-			if (deviceName.Equals(ignoredDeviceNames[i], System.StringComparison.OrdinalIgnoreCase))
-				return true;
-			}
-			
-		return false;
-		}
-
-
-	// ------------------
-	static private string[] ignoredDeviceNames = 
-		{ 
-		"uinput-fpc"		// fingerprint reader 
-		};
-
-
 
 	// ----------------------
 	static public string GetJoyAxisName(int joyId, int axisId)
@@ -487,10 +466,7 @@ public class GamepadManager : ControlFreak2.Internal.ComponentBase
 	private string GetConnectedDeviceName(int internalJoyId)
 		{
 		if ((this.deviceConnections == null) || (internalJoyId < 0) || (internalJoyId >= this.deviceConnections.Length) ||
-			string.IsNullOrEmpty(this.deviceConnections[internalJoyId]))
-			return string.Empty;
-
-		if (IsDeviceIgnored(this.deviceConnections[internalJoyId]))
+			(this.deviceConnections[internalJoyId] == null) || (this.deviceConnections[internalJoyId].Length == 0))
 			return string.Empty;
 
 		return this.deviceConnections[internalJoyId]; 

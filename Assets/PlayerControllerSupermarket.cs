@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerControllerSupermarket : Singleton<PlayerControllerSupermarket>
 {
     public GameObject player;
-    public FirstPersonController fcp;
+    //public FirstPersonController fcp;
     public Transform[] cratePositions, cratePositions1, itemPositions;
     public int crateCount;
     public GameObject currentBox;
@@ -89,9 +89,9 @@ public class PlayerControllerSupermarket : Singleton<PlayerControllerSupermarket
 
     public async void SetPositionOfPlayer(Transform t)
     {
-        fcp.canMove = false;
+        player.SetActive(false);
         player.transform.position = t.position;
         await Task.Delay(100);
-        fcp.canMove = true;
+        player.SetActive(true);
     }
 }

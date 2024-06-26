@@ -58934,10 +58934,10 @@ MonoBehaviour:
   - {fileID: 1478071880}
   - {fileID: 2015448623}
   itemPositions:
-  - {fileID: 9078805}
-  - {fileID: 543394378}
-  - {fileID: 1352800822}
-  - {fileID: 1318772856}
+  - {fileID: 2008499579}
+  - {fileID: 1398694380}
+  - {fileID: 368685565}
+  - {fileID: 196106282}
   crateCount: 0
   currentBox: {fileID: 0}
   playerBoxPos: {fileID: 6850822}
